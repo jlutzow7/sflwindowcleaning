@@ -1,0 +1,755 @@
+<style>
+  .sfl-homepage {
+    --green: #33b44a;
+    --blue: #1479c9;
+    --orange: #f26d21;
+    --teal: #20b7d2;
+    --purple: #7c3aed;
+    --dark-blue: #0b1b33;
+    --text-main: #1a2639;
+    --muted: #4a5b6d;
+    --soft-bg: #f6f9fc;
+    --bg: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-main);
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .sfl-homepage, .sfl-homepage * { box-sizing: border-box; }
+  .sfl-homepage a { text-decoration: none; }
+  .sfl-homepage img { max-width: 100%; }
+
+  /* HERO */
+  .sfl-hero {
+    position: relative;
+    min-height: 650px;
+    background-image:
+      linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%),
+      url("https://sflwindowcleaning.com/wp-content/uploads/2026/06/mansion.jpeg");
+    background-color: #a0c4d8;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 2%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .sfl-hero-inner { max-width: 680px; }
+
+  .sfl-hero h1 {
+    color: #fff;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.1;
+    margin: 0 0 20px;
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
+
+  .sfl-hero p {
+    color: rgba(255,255,255,0.95);
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 0 0 40px;
+    max-width: 600px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .sfl-btn-primary, .sfl-btn-huge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    color: #fff !important;
+    border-radius: 999px;
+    font-weight: 900;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  }
+
+  .sfl-btn-primary {
+    padding: 18px 32px;
+    font-size: 17px;
+    box-shadow: 0 8px 24px rgba(51,180,74,0.28);
+  }
+
+  .sfl-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(51,180,74,0.36); }
+
+  /* SERVICE NAV BAR */
+  .sfl-service-nav-bar {
+    background: var(--dark-blue);
+    padding: 0 6%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 24px rgba(11,27,51,0.18);
+  }
+
+  .sfl-service-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 24px 30px;
+    position: relative;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .sfl-service-link:hover { background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+
+  .sfl-service-link:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0; top: 25%; height: 50%; width: 1px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  .sfl-service-link svg { width: 32px; height: 32px; }
+  .icon-green { fill: none; stroke-width: 2; stroke: var(--green); }
+  .icon-blue { fill: none; stroke-width: 2; stroke: var(--blue); }
+  .icon-orange { fill: none; stroke-width: 2; stroke: var(--orange); }
+  .icon-teal { fill: none; stroke-width: 2; stroke: var(--teal); }
+  .icon-purple { fill: none; stroke-width: 2; stroke: var(--purple); }
+
+  /* TRUST SECTION */
+  .sfl-trust-section {
+    background: #fff;
+    padding: 80px 6%;
+    display: flex;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .sfl-trust-content { flex: 1; max-width: 480px; }
+
+  .sfl-trust-content h2, .sfl-about-wrapper h2 {
+    color: var(--dark-blue);
+    line-height: 1.1;
+    font-weight: 900;
+  }
+
+  .sfl-trust-content h2 { font-size: clamp(36px, 4vw, 48px); margin: 0 0 20px; }
+
+  .sfl-divider { width: 70px; height: 4px; background: var(--green); margin-bottom: 25px; }
+
+  .sfl-trust-content p, .sfl-about-wrapper p { color: #4a5b6d; line-height: 1.6; }
+  .sfl-trust-content p { font-size: 18px; margin: 0; }
+
+  .sfl-trust-grid { flex: 1.5; display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+
+  .sfl-feature { display: flex; gap: 20px; }
+
+  .sfl-feature-icon {
+    width: 64px; height: 64px;
+    border: 2px solid; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  .sfl-feature-icon svg { width: 32px; height: 32px; stroke-width: 1.5; fill: none; }
+
+  .sfl-feature.green .sfl-feature-icon,
+  .sfl-feature.green .sfl-feature-icon svg,
+  .sfl-feature.green h3 { border-color: var(--green); stroke: var(--green); color: var(--green); }
+
+  .sfl-feature.blue .sfl-feature-icon,
+  .sfl-feature.blue .sfl-feature-icon svg,
+  .sfl-feature.blue h3 { border-color: var(--blue); stroke: var(--blue); color: var(--blue); }
+
+  .sfl-feature-text h3 { margin: 0 0 10px; font-size: 18px; font-weight: 900; }
+  .sfl-feature-text p { margin: 0; color: var(--text-main); font-size: 15px; line-height: 1.5; }
+
+  /* SHARED SECTION STYLES */
+  .sfl-section { padding: 100px 6%; }
+  .sfl-section-light { background: var(--soft-bg); }
+  .sfl-section-white { background: #fff; }
+  .sfl-section-dark { background: var(--dark-blue); color: #fff; }
+
+  /* DETAILED SERVICE SECTIONS */
+  .sfl-svc { padding: 100px 6%; position: relative; }
+  .sfl-svc-light { background: #fff; }
+  .sfl-svc-tint { background: var(--bg); }
+
+  .sfl-svc::before {
+    content: ""; position: absolute;
+    left: 0; top: 0; bottom: 0; width: 6px;
+    background: var(--svc-color, var(--green));
+  }
+
+  .sfl-svc-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 70px; align-items: start;
+  }
+
+  .sfl-svc-inner.reverse { direction: rtl; }
+  .sfl-svc-inner.reverse > * { direction: ltr; }
+
+  .sfl-svc-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--svc-color, var(--green)); margin-bottom: 14px;
+  }
+
+  .sfl-svc-eyebrow span { display: inline-block; width: 28px; height: 2px; background: currentColor; }
+
+  .sfl-svc-text h2 {
+    font-size: clamp(30px, 3.5vw, 44px); font-weight: 900;
+    color: var(--dark-blue); line-height: 1.1; margin: 0 0 20px;
+  }
+
+  .sfl-svc-text p { font-size: 17px; line-height: 1.8; color: var(--muted); margin: 0 0 18px; }
+
+  .sfl-callout {
+    border-left: 4px solid var(--svc-color, var(--green));
+    background: color-mix(in srgb, var(--svc-color, var(--green)) 8%, white);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px; margin: 22px 0;
+    font-size: 15px; line-height: 1.6; color: var(--text-main);
+  }
+
+  .sfl-callout strong { color: var(--dark-blue); }
+
+  .sfl-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0; }
+
+  .sfl-mini-card {
+    background: #fff; border: 1px solid rgba(0,0,0,0.08);
+    border-top: 3px solid var(--svc-color, var(--green));
+    border-radius: 12px; padding: 18px 16px;
+  }
+
+  .sfl-mini-card h4 {
+    font-size: 14px; font-weight: 800;
+    color: var(--svc-color, var(--green));
+    margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  .sfl-mini-card ul { margin: 0; padding-left: 16px; font-size: 14px; line-height: 1.7; color: var(--text-main); }
+
+  .sfl-bullets { list-style: none; margin: 18px 0 24px; padding: 0; }
+
+  .sfl-bullets li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 16px; line-height: 1.6; color: var(--text-main);
+    padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .sfl-bullets li:last-child { border-bottom: none; }
+
+  .sfl-bullets li::before {
+    content: "✓"; font-weight: 900;
+    color: var(--svc-color, var(--green));
+    font-size: 14px; flex-shrink: 0; margin-top: 2px;
+  }
+
+  .sfl-learn-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--svc-color, var(--green)); color: #fff !important;
+    padding: 16px 30px; border-radius: 999px;
+    font-weight: 800; font-size: 16px; margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .sfl-learn-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+  .sfl-learn-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2.5; flex-shrink: 0; }
+
+  .sfl-svc-visual { display: flex; flex-direction: column; gap: 16px; }
+
+  .sfl-svc-photo { width: 100%; border-radius: 18px; object-fit: cover; box-shadow: 0 20px 50px rgba(11,27,51,0.12); }
+  .sfl-svc-photo-tall { height: 480px; }
+
+  .sfl-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+  .sfl-stat {
+    background: #fff; border-radius: 14px; padding: 18px 14px;
+    text-align: center; border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .sfl-stat-num { font-size: 26px; font-weight: 900; color: var(--svc-color, var(--green)); line-height: 1; margin-bottom: 4px; }
+  .sfl-stat-label { font-size: 12px; color: var(--muted); line-height: 1.3; }
+
+  /* PURE WATER FEATURE */
+  .sfl-pure-feature { background: var(--dark-blue); padding: 90px 6%; position: relative; overflow: hidden; }
+
+  .sfl-pure-feature::before {
+    content: ""; position: absolute; top: -80px; right: -80px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(51,180,74,0.15), transparent 70%); pointer-events: none;
+  }
+
+  .sfl-pure-feature::after {
+    content: ""; position: absolute; bottom: -60px; left: -60px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(32,183,210,0.12), transparent 70%); pointer-events: none;
+  }
+
+  .sfl-pure-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 70px; align-items: center; position: relative; z-index: 2;
+  }
+
+  .sfl-pure-text .sfl-svc-eyebrow { color: var(--green); }
+  .sfl-pure-text h2 { font-size: clamp(30px, 3.5vw, 44px); font-weight: 900; color: #fff; line-height: 1.1; margin: 0 0 20px; }
+  .sfl-pure-text p { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.8); margin: 0 0 18px; }
+  .sfl-pure-text .sfl-bullets li { color: rgba(255,255,255,0.85); border-bottom-color: rgba(255,255,255,0.08); }
+
+  .sfl-pure-steps { display: flex; flex-direction: column; gap: 20px; }
+
+  .sfl-pure-step {
+    display: flex; gap: 20px; align-items: flex-start;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 24px 22px; transition: background 0.2s ease;
+  }
+
+  .sfl-pure-step:hover { background: rgba(255,255,255,0.1); }
+  .sfl-step-num { font-size: 28px; font-weight: 900; color: var(--green); line-height: 1; flex-shrink: 0; width: 40px; }
+  .sfl-step-content h4 { font-size: 16px; font-weight: 800; color: #fff; margin: 0 0 6px; }
+  .sfl-step-content p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.65); margin: 0; }
+
+  /* MIDDLE CTA */
+  .sfl-services-cta {
+    max-width: 860px;
+    margin: 55px auto 0;
+    padding: 34px;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at top left, rgba(51,180,74,0.14), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(20,121,201,0.16), transparent 35%),
+      #fff;
+    box-shadow: 0 12px 32px rgba(16,32,51,0.09);
+    text-align: center;
+    border: 1px solid rgba(11,27,51,0.07);
+  }
+
+  .sfl-services-cta h3 { margin: 0 0 10px; color: var(--dark-blue); font-size: 26px; font-weight: 900; }
+  .sfl-services-cta p { margin: 0 0 22px; color: #4a5b6d; font-size: 17px; line-height: 1.6; }
+
+  /* TESTIMONIALS */
+  .sfl-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sfl-section-heading { max-width: 840px; margin: 0 auto 60px; text-align: center; }
+  .sfl-section-heading h2 { margin: 0 0 16px; font-size: clamp(34px, 4vw, 48px); color: var(--dark-blue); line-height: 1.1; font-weight: 900; }
+  .sfl-section-heading p { margin: 0; font-size: 19px; color: #4a5b6d; }
+
+  .sfl-testimonial-card {
+    background: var(--soft-bg); padding: 40px 30px;
+    border-radius: 18px; box-shadow: 0 12px 32px rgba(16,32,51,0.09);
+    text-align: center; border-top: 4px solid var(--green);
+  }
+
+  .sfl-stars { color: #f4c430; font-size: 24px; letter-spacing: 3px; margin-bottom: 20px; line-height: 1; }
+  .sfl-testimonial-quote { font-size: 17px; font-style: italic; color: #4a5b6d; line-height: 1.7; margin: 0 0 24px; }
+  .sfl-testimonial-author { font-weight: 900; color: var(--dark-blue); font-size: 17px; margin: 0; }
+  .sfl-testimonial-location { font-size: 14px; color: var(--green); font-weight: 800; margin: 4px 0 0; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* ABOUT */
+  .sfl-about-wrapper { max-width: 1000px; margin: 0 auto; text-align: center; }
+  .sfl-about-wrapper h2 { font-size: clamp(32px, 4vw, 44px); margin: 0 0 24px; }
+  .sfl-about-wrapper p { font-size: 19px; line-height: 1.8; margin: 0 0 24px; }
+
+  /* BOTTOM CTA */
+  .sfl-cta { text-align: center; max-width: 760px; margin: 0 auto; }
+  .sfl-cta h2 { margin: 0 0 16px; font-size: clamp(34px, 4vw, 52px); color: #fff; }
+  .sfl-cta p { margin: 0 0 36px; color: rgba(255,255,255,0.9); font-size: 20px; line-height: 1.6; }
+  .sfl-cta-actions { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+
+  .sfl-btn-huge { padding: 22px 48px; font-size: 20px; box-shadow: 0 8px 24px rgba(51,180,74,0.4); }
+  .sfl-btn-huge:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(51,180,74,0.5); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .sfl-trust-section { flex-direction: column; }
+    .sfl-trust-content { max-width: 100%; }
+    .sfl-service-link { padding: 20px 15px; }
+    .sfl-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .sfl-svc-inner, .sfl-pure-inner { grid-template-columns: 1fr; gap: 40px; }
+    .sfl-svc-inner.reverse { direction: ltr; }
+    .sfl-svc-photo-tall { height: 300px; }
+    .sfl-two-col { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .sfl-hero { min-height: 560px; padding: 70px 24px; background-position: center right; }
+    .sfl-trust-grid { grid-template-columns: 1fr; }
+    .sfl-service-link::after { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .sfl-service-nav-bar { padding: 10px 16px; justify-content: flex-start; }
+    .sfl-service-link { width: 100%; justify-content: flex-start; padding: 16px 10px; }
+    .sfl-testimonials-grid { grid-template-columns: 1fr; }
+    .sfl-service-image { height: 245px; }
+    .sfl-section, .sfl-trust-section, .sfl-svc, .sfl-pure-feature { padding: 60px 24px; }
+  }
+</style>
+
+<div class="sfl-homepage">
+
+  <!-- HERO -->
+  <section class="sfl-hero">
+    <div class="sfl-hero-inner">
+      <h1>Crystal Clear Results. Every Time.</h1>
+      <p>Professional window cleaning and exterior cleaning services for homes and businesses throughout Broward, Palm Beach, and Miami-Dade Counties.</p>
+      <a class="sfl-btn-primary" href="/contact/">Schedule a Free On-Site Quote</a>
+    </div>
+  </section>
+
+ 
+  <!-- TRUST SECTION -->
+  <section class="sfl-trust-section">
+    <div class="sfl-trust-content">
+      <h2>Exterior Cleaning You Can Trust</h2>
+      <div class="sfl-divider"></div>
+      <p>We use advanced equipment, safe cleaning methods, and a commitment to excellence to deliver exceptional results every time.</p>
+    </div>
+    <div class="sfl-trust-grid">
+      <div class="sfl-feature green">
+        <div class="sfl-feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+          </svg>
+        </div>
+        <div class="sfl-feature-text">
+          <h3>Crystal Clear Results</h3>
+          <p>Streak-free windows and spotless surfaces every time.</p>
+        </div>
+      </div>
+      <div class="sfl-feature blue">
+        <div class="sfl-feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
+        <div class="sfl-feature-text">
+          <h3>Safe &amp; Professional</h3>
+          <p>We use professional-grade equipment and safe cleaning methods.</p>
+        </div>
+      </div>
+      <div class="sfl-feature blue">
+        <div class="sfl-feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6 8 4 12 4 15a8 8 0 0 0 16 0c0-3-2-7-8-13z"></path>
+          </svg>
+        </div>
+        <div class="sfl-feature-text">
+          <h3>Eco-Friendly Solutions</h3>
+          <p>Our pure water and soft washing systems are safe for your home and the environment.</p>
+        </div>
+      </div>
+      <div class="sfl-feature green">
+        <div class="sfl-feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="sfl-feature-text">
+          <h3>Trusted &amp; Reliable</h3>
+          <p>Punctual, dependable, and committed to your satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PURE WATER -->
+  <section id="pure-water" class="sfl-pure-feature">
+    <div class="sfl-pure-inner">
+      <div class="sfl-pure-text">
+        <div class="sfl-svc-eyebrow"><span></span>Our Method</div>
+        <h2>The Pure Water Difference</h2>
+        <p>Most window cleaners use soap — which sounds clean, but soap leaves an invisible residue that attracts dust and causes streaks. We use a different approach entirely.</p>
+        <p>Our multi-stage filtration system removes 99.9% of minerals and impurities from the water. Because pure water is "hungry" for contaminants, it lifts and rinses away dirt completely — and when it evaporates, it leaves absolutely nothing behind. No spots. No streaks. No residue.</p>
+        <p>This is the same technology used by professional window cleaners on high-rise buildings throughout the world, now available for your home or business in South Florida.</p>
+        <ul class="sfl-bullets">
+          <li>Zero chemicals — safe around kids, pets, and landscaping</li>
+          <li>Stays cleaner longer with no soap residue to attract dust</li>
+          <li>Reaches upper floors safely from the ground using water-fed poles</li>
+          <li>Flawless, streak-free finish every single time</li>
+        </ul>
+      </div>
+      <div class="sfl-pure-steps">
+        <div class="sfl-pure-step">
+          <div class="sfl-step-num">01</div>
+          <div class="sfl-step-content">
+            <h4>Multi-Stage Filtration</h4>
+            <p>Tap water passes through sediment, carbon, and reverse osmosis filters to remove chlorine, minerals, and dissolved solids.</p>
+          </div>
+        </div>
+        <div class="sfl-pure-step">
+          <div class="sfl-step-num">02</div>
+          <div class="sfl-step-content">
+            <h4>Deionization (DI) Stage</h4>
+            <p>A final DI resin stage brings the water to 000 TDS — completely pure, with no dissolved content left to leave spots.</p>
+          </div>
+        </div>
+        <div class="sfl-pure-step">
+          <div class="sfl-step-num">03</div>
+          <div class="sfl-step-content">
+            <h4>Water-Fed Pole Application</h4>
+            <p>Pure water is delivered through a soft brush on an extendable pole, agitating and rinsing the glass simultaneously — no ladders needed.</p>
+          </div>
+        </div>
+        <div class="sfl-pure-step">
+          <div class="sfl-step-num">04</div>
+          <div class="sfl-step-content">
+            <h4>Spot-Free Drying</h4>
+            <p>Because the water contains nothing, it evaporates completely clean — leaving a flawless, sparkling finish with zero residue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WINDOW CLEANING -->
+  <section id="window-cleaning" class="sfl-svc sfl-svc-light" style="--svc-color: var(--green);">
+    <div class="sfl-svc-inner">
+      <div class="sfl-svc-text">
+        <div class="sfl-svc-eyebrow"><span></span>Window Cleaning</div>
+        <h2>Crystal-Clear Windows for Homes &amp; Businesses</h2>
+        <p>In South Florida, windows take a beating. Salt air drifting in from the Atlantic leaves a white haze on glass. Afternoon thunderstorms deposit mineral deposits and pollen. Humidity encourages mold and mildew to form on frames and sills. Over time, what looks like a light film is actually layers of buildup that ordinary cleaning can't touch.</p>
+        <p>We use our pure water system and professional squeegee techniques to remove all of it — leaving your glass flawlessly clear, inside and out.</p>
+        <div class="sfl-two-col">
+          <div class="sfl-mini-card">
+            <h4>Residential</h4>
+            <ul>
+              <li>Single-family homes</li>
+              <li>Condos &amp; townhomes</li>
+              <li>Interior &amp; exterior</li>
+              <li>Sliding glass doors</li>
+              <li>Screens &amp; tracks</li>
+              <li>High windows &amp; skylights</li>
+            </ul>
+          </div>
+          <div class="sfl-mini-card">
+            <h4>Commercial</h4>
+            <ul>
+              <li>Storefronts &amp; retail</li>
+              <li>Office buildings</li>
+              <li>Restaurants &amp; hotels</li>
+              <li>Medical &amp; professional</li>
+              <li>HOAs &amp; property mgmt</li>
+              <li>Recurring service plans</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sfl-callout">
+          <strong>How often?</strong> We have residential and commercial customers on monthly, bi-monthly, and quarterly schedules. These plans are more affordable than you might expect — and whatever your needs, we can make it work.
+        </div>
+        <div class="sfl-callout">
+          <strong>Ask about our Home Rinse Service</strong> — A light exterior rinse to clear bugs, cobwebs, and debris from soffits, eaves, and exterior walls. A popular add-on for monthly and quarterly window cleaning customers.
+        </div>
+        <a class="sfl-learn-btn" href="/windows/">
+          Full Window Cleaning Details
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="sfl-svc-visual">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/wp-content/uploads/2026/06/bechhouse.jpeg" alt="Professional window cleaning South Florida">
+        <div class="sfl-stat-row">
+          <div class="sfl-stat"><div class="sfl-stat-num">20+</div><div class="sfl-stat-label">Years serving South Florida</div></div>
+          <div class="sfl-stat"><div class="sfl-stat-num">000</div><div class="sfl-stat-label">TDS pure water rating</div></div>
+          <div class="sfl-stat"><div class="sfl-stat-num">0</div><div class="sfl-stat-label">Streaks. Guaranteed.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLAR PANELS -->
+  <section id="solar-panels" class="sfl-svc sfl-svc-tint" style="--svc-color: var(--orange);">
+    <div class="sfl-svc-inner reverse">
+      <div class="sfl-svc-text">
+        <div class="sfl-svc-eyebrow"><span></span>Solar Panel Cleaning</div>
+        <h2>Dirty Panels Cost You Money Every Day</h2>
+        <p>Studies show that dirty solar panels can lose <strong>15–25% of their energy output</strong> — sometimes more in coastal environments like South Florida. Salt deposits from sea breezes, pollen from spring blooms, bird droppings, and the baked-on grime from our intense subtropical sun all block the sunlight your panels need to perform.</p>
+        <p>Rain does not clean your panels. It moves dirt around and leaves behind mineral deposits as it evaporates. Professional cleaning with purified water is the only way to restore full efficiency.</p>
+        <ul class="sfl-bullets">
+          <li>Restores lost energy output — often immediately measurable</li>
+          <li>Pure water leaves zero mineral residue on panel glass</li>
+          <li>Non-abrasive soft brushes — manufacturer safe</li>
+          <li>Residential rooftop arrays and commercial ground mounts</li>
+          <li>Safe for all major panel brands</li>
+        </ul>
+        <div class="sfl-callout">
+          <strong>How often?</strong> We recommend every <strong>3–4 months</strong> for most South Florida properties. Coastal homes within a mile of the ocean often benefit from every 6–8 weeks due to salt spray accumulation.
+        </div>
+        <a class="sfl-learn-btn" href="/solar-panels/">
+          Full Solar Panel Cleaning Details
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="sfl-svc-visual">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/wp-content/uploads/2026/06/solar-panels2.jpg" alt="Solar panel cleaning South Florida">
+        <div class="sfl-stat-row">
+          <div class="sfl-stat"><div class="sfl-stat-num">25%</div><div class="sfl-stat-label">Avg output lost when dirty</div></div>
+          <div class="sfl-stat"><div class="sfl-stat-num">Pure</div><div class="sfl-stat-label">Water — zero residue</div></div>
+          <div class="sfl-stat"><div class="sfl-stat-num">$0</div><div class="sfl-stat-label">Damage risk — soft brush only</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT WASHING -->
+  <section id="soft-washing" class="sfl-svc sfl-svc-light" style="--svc-color: var(--teal);">
+    <div class="sfl-svc-inner">
+      <div class="sfl-svc-text">
+        <div class="sfl-svc-eyebrow"><span></span>Exterior Soft Washing</div>
+        <h2>The Right Way to Clean Stucco &amp; Painted Surfaces</h2>
+        <p>Pressure washing is powerful — but point it at stucco, painted siding, or delicate trim and you risk blasting paint off, forcing water behind your siding, and etching surfaces permanently. South Florida homes, with their stucco exteriors and intricate architectural details, require a gentler approach.</p>
+        <p>Soft washing uses low-pressure water — similar to a garden hose — combined with professional-grade biodegradable cleaning solutions that kill mold, mildew, and algae at the root. The result is a deep clean that lasts far longer than pressure washing alone.</p>
+        <ul class="sfl-bullets">
+          <li>Safe for stucco, Hardie board, vinyl, and painted wood</li>
+          <li>Kills mold and algae — doesn't just rinse it away</li>
+          <li>Protects paint, caulk, and architectural details</li>
+          <li>Results last 4–6x longer than pressure washing alone</li>
+          <li>Biodegradable solutions — safe for plants and landscaping</li>
+        </ul>
+        <div class="sfl-callout">
+          <strong>How often?</strong> Most South Florida home exteriors benefit from soft washing every <strong>12–18 months</strong>. Homes near the water, backing to preserves, or in shaded areas may need attention more frequently due to accelerated mold and algae growth.
+        </div>
+        <a class="sfl-learn-btn" href="/soft-washing/">
+          Full Soft Washing Details
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="sfl-svc-visual">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/wp-content/uploads/2026/06/home-ext.jpeg" alt="Soft washing stucco home South Florida">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESSURE WASHING -->
+  <section id="pressure-washing" class="sfl-svc sfl-svc-tint" style="--svc-color: var(--blue);">
+    <div class="sfl-svc-inner reverse">
+      <div class="sfl-svc-text">
+        <div class="sfl-svc-eyebrow"><span></span>Pressure Washing</div>
+        <h2>Deep-Clean Hard Surfaces &amp; Hardscapes</h2>
+        <p>Driveways, sidewalks, pool decks, and patios are constantly exposed to the elements — and in South Florida, that means tire marks, rust stains from irrigation water, green algae from summer humidity, and years of ground-in grime. Standard cleaning products can't touch it.</p>
+        <p>Professional pressure washing cuts through all of it, restoring hard surfaces to like-new condition. We carefully calibrate pressure levels for each surface type — high enough to clean effectively, controlled enough not to damage pavers, etch concrete, or disturb grout lines.</p>
+        <ul class="sfl-bullets">
+          <li>Concrete driveways and sidewalks</li>
+          <li>Brick pavers and travertine patios</li>
+          <li>Pool decks and screen enclosure frames</li>
+          <li>Commercial parking lots and walkways</li>
+          <li>Removes tire marks, rust, algae, and heavy staining</li>
+        </ul>
+        <div class="sfl-callout">
+          <strong>How often?</strong> Driveways and pool decks typically benefit from cleaning every <strong>12–24 months</strong>. High-traffic commercial areas or properties near landscaping may need more frequent service.
+        </div>
+        <a class="sfl-learn-btn" href="/pressure-washing/">
+          Full Pressure Washing Details
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="sfl-svc-visual">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/wp-content/uploads/2026/06/redclayroof.jpeg" alt="Pressure washing driveway South Florida">
+      </div>
+    </div>
+  </section>
+
+  <!-- GUTTER CLEANING -->
+  <section id="gutter-cleaning" class="sfl-svc sfl-svc-light" style="--svc-color: var(--purple);">
+    <div class="sfl-svc-inner">
+      <div class="sfl-svc-text">
+        <div class="sfl-svc-eyebrow"><span></span>Gutter Cleaning</div>
+        <h2>Protect Your Home From Water Damage</h2>
+        <p>South Florida's rainy season brings intense downpours — sometimes several inches of rain in a single afternoon. When gutters are clogged with leaves, seed pods, palm debris, and fine sediment, that water has nowhere to go. It backs up under your roofline, overflows down your fascia and soffits, and pools against your foundation.</p>
+        <p>The damage from neglected gutters — wood rot, mold, foundation issues, and flooded landscaping — far outweighs the cost of routine cleaning. We clear your gutters completely, flush the downspouts, and make sure everything is flowing properly before we leave.</p>
+        <ul class="sfl-bullets">
+          <li>Complete removal of leaves, debris, and sediment buildup</li>
+          <li>Downspout flushing and flow verification</li>
+          <li>Inspection for sagging sections or drainage issues</li>
+          <li>Residential homes, townhomes, and small commercial</li>
+          <li>Protects fascia, soffits, foundation, and landscaping</li>
+        </ul>
+        <div class="sfl-callout">
+          <strong>How often?</strong> We recommend gutter cleaning <strong>2–3 times per year</strong> — before rainy season (May), mid-season (August), and after peak leaf fall (December). Properties surrounded by mature trees may need quarterly service.
+        </div>
+        <a class="sfl-learn-btn" href="/gutter-cleaning/">
+          Full Gutter Cleaning Details
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+      <div class="sfl-svc-visual">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/wp-content/uploads/2026/06/gutter2.png" alt="Gutter cleaning South Florida">
+      </div>
+    </div>
+  </section>
+
+  <!-- MIDDLE CTA -->
+  <section class="sfl-section sfl-section-white">
+    <div class="sfl-services-cta">
+      <h3>Not sure what your property needs?</h3>
+      <p>We can take a look and recommend the right cleaning service for your home or business.</p>
+      <a class="sfl-btn-primary" href="/contact/">Get a Free On-Site Recommendation</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sfl-section sfl-section-light">
+    <div class="sfl-section-heading">
+      <h2>What Our Customers Are Saying</h2>
+      <p>Don't just take our word for it. See why home and business owners across South Florida trust us with their properties.</p>
+    </div>
+    <div class="sfl-testimonials-grid">
+      <div class="sfl-testimonial-card">
+        <div class="sfl-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="sfl-testimonial-quote">" I cannot say enough wonderful things about the incredible job they do cleaning my windows. Living in South Florida, our windows constantly collect dirt, salt, rain spots, and grime, but they make them look absolutely brand new every single time. They are reliable, professional, detail oriented. "</p>
+        <p class="sfl-testimonial-author">Chloe W.</p>
+        <p class="sfl-testimonial-location">Fort Lauderdale, FL</p>
+      </div>
+      <div class="sfl-testimonial-card">
+        <div class="sfl-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="sfl-testimonial-quote">     “Jeff did an exceptional job cleaning our windows. He was professional and reliable. The windows are absolutely spotless and have never looked this clear. His attention to detail and to quality really stood out. If you’re looking for top-notch window cleaning service, I highly recommend South Florida Window Cleaning!”</p>
+        <p class="sfl-testimonial-author">Farrell G.</p>
+        <p class="sfl-testimonial-location">Southwest Ranches, FL</p>
+      </div>
+      <div class="sfl-testimonial-card">
+        <div class="sfl-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="sfl-testimonial-quote">"They soft-washed the exterior of our home and cleaned our solar panels. The dirt buildup was completely gone. Very respectful of our property and plants!"</p>
+        <p class="sfl-testimonial-author">Amanda T.</p>
+        <p class="sfl-testimonial-location">Boca Raton, FL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about-us" class="sfl-section sfl-section-white">
+    <div class="sfl-about-wrapper">
+      <h2>Your Trusted Local Cleaning Experts</h2>
+      <p>For nearly two decades, South Florida Window Cleaning has provided professional exterior cleaning services to residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties.</p>
+      <p>We are committed to delivering quality workmanship, attention to detail, and dependable service on every project. Whether cleaning a single residence, a storefront, or a massive commercial property, our goal is to provide professional results and a level of service that keeps customers coming back and referring us to others.</p>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="sfl-section sfl-section-dark">
+    <div class="sfl-cta">
+      <h2>Ready for Crystal Clear Results?</h2>
+      <p>Contact South Florida Window Cleaning today to schedule professional exterior cleaning services for your home or business.</p>
+      <div class="sfl-cta-actions">
+        <a class="sfl-btn-huge" href="/contact/">Schedule a Free On-Site Quote</a>
+      </div>
+    </div>
+  </section>
+
+</div>
