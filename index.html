@@ -47,12 +47,14 @@
   .header-nav {
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    flex: 1;
+    gap: 46px;
   }
 
   .header-nav a {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--blue);
     position: relative;
   }
@@ -63,7 +65,7 @@
 
   .services-dropdown > span {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--blue);
     cursor: pointer;
     display: flex;
@@ -113,11 +115,14 @@
 
   .header-burger { display: none; background: none; border: none; cursor: pointer; }
 
+  .header-phone-mobile { display: none; }
+
   @media (max-width: 900px) {
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: block; }
     .header-phone-mobile {
+      display: block;
       width: 100%;
       text-align: center;
       padding: 8px 0 4px;
@@ -237,7 +242,7 @@
     min-height: 600px;
     background-image:
       linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%),
-      url("images/img1.jpg");
+      url("images/1(12).jpeg");
     background-color: #a0c4d8;
     background-size: cover;
     background-position: center;
@@ -469,7 +474,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="header-logo">
-      <img src="images/logo.png" alt="South Florida Window Cleaning">
+      <img src="images/lgo.png" alt="South Florida Window Cleaning">
     </a>
 
     <nav class="header-nav">
@@ -610,7 +615,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/img2.jpg" alt="Professional window cleaning South Florida">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/1(9).jpeg" alt="Professional window cleaning South Florida">
         <div class="sfl-stat-row">
           <div class="sfl-stat"><div class="sfl-stat-num">20+</div><div class="sfl-stat-label">Years serving South Florida</div></div>
           <div class="sfl-stat"><div class="sfl-stat-num">000</div><div class="sfl-stat-label">TDS pure water rating</div></div>
@@ -640,7 +645,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/img3.jpg" alt="Solar panel cleaning South Florida">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/1(1).jpg" alt="Solar panel cleaning South Florida">
         <div class="sfl-stat-row">
           <div class="sfl-stat"><div class="sfl-stat-num">25%</div><div class="sfl-stat-label">Avg output lost when dirty</div></div>
           <div class="sfl-stat"><div class="sfl-stat-num">Pure</div><div class="sfl-stat-label">Water — zero residue</div></div>
@@ -670,7 +675,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/img4.jpg" alt="Soft washing stucco home South Florida">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/1(11).jpeg" alt="Soft washing stucco home South Florida">
       </div>
     </div>
   </section>
@@ -695,7 +700,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/img5.jpg" alt="Pressure washing driveway South Florida">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/1(1).jpeg" alt="Pressure washing driveway South Florida">
       </div>
     </div>
   </section>
@@ -720,7 +725,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/img6.jpg" alt="Gutter cleaning South Florida">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="images/1(5).png" alt="Gutter cleaning South Florida">
       </div>
     </div>
   </section>
@@ -783,7 +788,7 @@
   <div class="footer-main">
 
     <div class="footer-top-row">
-      <a href="/" class="footer-logo"><img src="images/logo.png" alt="South Florida Window Cleaning"></a>
+      <a href="/" class="footer-logo"><img src="images/lgo.png" alt="South Florida Window Cleaning"></a>
 
       <div class="footer-map">
         <img src="images/service-area-map.jpg" alt="South Florida Window Cleaning service area map">
