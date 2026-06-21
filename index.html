@@ -132,7 +132,7 @@
     }
   }
 
-  /* ============ FOOTER (3-column, shorter) ============ */
+  /* ============ FOOTER ============ */
   .site-footer {
     background: #fff;
   }
@@ -153,7 +153,6 @@
     padding-bottom: 24px;
   }
 
-  /* LEFT THIRD — nav */
   .footer-nav-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -171,7 +170,6 @@
 
   .footer-nav-grid a:hover { text-decoration: underline; }
 
-  /* CENTER THIRD — logo + contact */
   .footer-center {
     display: flex;
     flex-direction: column;
@@ -202,7 +200,6 @@
 
   .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
 
-  /* RIGHT THIRD — service text + social */
   .footer-right {
     display: flex;
     flex-direction: column;
@@ -318,7 +315,7 @@
 
   .sfl-trust-section {
     background: #fff;
-    padding: 70px 6%;
+    padding: 50px 6%;
     display: flex;
     gap: 60px;
     max-width: 1400px;
@@ -346,13 +343,13 @@
   .sfl-feature-text h3 { margin: 0 0 8px; font-size: 17px; font-weight: 900; }
   .sfl-feature-text p { margin: 0; color: var(--text-main); font-size: 14px; line-height: 1.5; }
 
-  .sfl-section { padding: 80px 6%; }
+  .sfl-section { padding: 56px 6%; }
   .sfl-section-light { background: var(--soft-bg); }
   .sfl-section-white { background: #fff; }
   .sfl-section-dark { background: var(--dark-blue); color: #fff; }
 
-  /* ============ SERVICE SECTIONS — bigger, wider, centered images ============ */
-  .sfl-svc { padding: 70px 6%; position: relative; }
+  /* ============ SERVICE SECTIONS ============ */
+  .sfl-svc { padding: 50px 6%; position: relative; }
   .sfl-svc-light { background: #fff; }
   .sfl-svc-tint { background: var(--bg); }
 
@@ -436,7 +433,7 @@
   .sfl-stat-num { font-size: 24px; font-weight: 900; color: var(--svc-color, var(--green)); line-height: 1; margin-bottom: 4px; }
   .sfl-stat-label { font-size: 11px; color: var(--muted); line-height: 1.3; }
 
-  .sfl-pure-feature { background: var(--dark-blue); padding: 70px 6%; }
+  .sfl-pure-feature { background: var(--dark-blue); padding: 50px 6%; }
   .sfl-pure-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
   .sfl-pure-text .sfl-svc-eyebrow { color: var(--green); }
   .sfl-pure-text h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 900; color: #fff; line-height: 1.15; margin: 0 0 18px; }
@@ -505,7 +502,7 @@
 
   @media (max-width: 600px) {
     .sfl-testimonials-grid { grid-template-columns: 1fr; }
-    .sfl-section, .sfl-trust-section, .sfl-svc, .sfl-pure-feature { padding: 50px 24px; }
+    .sfl-section, .sfl-trust-section, .sfl-svc, .sfl-pure-feature { padding: 36px 24px; }
   }
 </style>
 </head>
@@ -755,7 +752,7 @@
     </div>
   </section>
 
-  <section id="gutter-cleaning" class="sfl-svc sfl-svc-light" style="--svc-color: var(--purple); padding-bottom: 40px;">
+  <section id="gutter-cleaning" class="sfl-svc sfl-svc-light" style="--svc-color: var(--purple);">
     <div class="sfl-svc-inner">
       <div class="sfl-svc-text">
         <div class="sfl-svc-eyebrow"><span></span>Gutter Cleaning</div>
@@ -859,7 +856,6 @@
 
     <div class="footer-top-row">
 
-      <!-- LEFT THIRD: nav -->
       <nav class="footer-nav-grid">
         <a href="/">Home</a>
         <a href="/soft-washing/">Soft Washing</a>
@@ -872,7 +868,6 @@
         <a href="/about-us/">About Us</a>
       </nav>
 
-      <!-- CENTER THIRD: logo + contact -->
       <div class="footer-center">
         <a href="/" class="footer-logo"><img src="images/lgo (Medium).png" alt="South Florida Window Cleaning"></a>
         <div class="footer-center-contact">
@@ -888,7 +883,6 @@
         </div>
       </div>
 
-      <!-- RIGHT THIRD: service area + social -->
       <div class="footer-right">
         <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
         <div class="footer-social">
