@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Cleaning | South Florida Window Cleaning</title>
+<meta name="description" content="Professional residential and commercial window cleaning using our pure water system. Serving Broward, Palm Beach, and Miami-Dade Counties.">
+<style>
+  :root {
+    --green: #33b44a;
+    --blue: #1479c9;
+    --orange: #f26d21;
+    --teal: #20b7d2;
+    --purple: #7c3aed;
+    --dark-blue: #0b1b33;
+    --text-main: #1a2639;
+    --muted: #4a5b6d;
+    --soft-bg: #f6f9fc;
+    --bg: #f4f7fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; color: var(--text-main); width: 100%; overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #eef4fa;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 4%;
+    gap: 20px;
+  }
+
+  .header-logo img { height: 56px; }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 46px;
+  }
+
+  .header-nav a {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--blue);
+    position: relative;
+  }
+
+  .header-nav a.active { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
+
+  .services-dropdown { position: relative; }
+
+  .services-dropdown > span {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--blue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .services-dropdown.active > span { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
+
+  .services-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(11,27,51,0.15);
+    padding: 8px 0;
+    min-width: 200px;
+    z-index: 10;
+  }
+
+  .services-dropdown:hover .services-menu { display: block; }
+
+  .services-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  .services-menu a:hover { background: var(--soft-bg); color: var(--blue); }
+  .services-menu a.active { color: var(--blue); background: var(--soft-bg); }
+
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+
+  .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--blue);
+  }
+
+  .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
+
+  .header-hours { font-size: 12px; color: var(--muted); }
+
+  .header-burger { display: none; background: none; border: none; cursor: pointer; }
+
+  .header-phone-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .header-inner { flex-wrap: wrap; }
+    .header-nav, .header-right { display: none; }
+    .header-burger { display: block; }
+    .header-phone-mobile {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 8px 0 4px;
+      border-top: 1px solid rgba(11,27,51,0.08);
+      font-weight: 800;
+      color: var(--blue);
+    }
+  }
+
+  /* ============ FOOTER ============ */
+  .site-footer {
+    background: #fff;
+  }
+
+  .footer-topbar { background: var(--dark-blue); height: 8px; }
+
+  .footer-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 4% 0;
+  }
+
+  .footer-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 24px;
+  }
+
+  .footer-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 18px;
+    row-gap: 10px;
+    align-content: start;
+  }
+
+  .footer-nav-grid a {
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .footer-nav-grid a:hover { text-decoration: underline; }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-logo img { height: 56px; }
+
+  .footer-center-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .footer-center-contact a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .footer-center-contact a:hover { color: var(--blue); }
+
+  .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+  }
+
+  .footer-service-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .footer-social { display: flex; gap: 14px; }
+
+  .footer-social a { color: var(--muted); }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a:hover { color: var(--blue); }
+
+  .footer-copyright {
+    background: #6b7d96;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 700px) {
+    .footer-top-row { grid-template-columns: 1fr; text-align: center; }
+    .footer-nav-grid { grid-template-columns: 1fr; justify-items: center; gap: 8px; }
+    .footer-right { align-items: center; text-align: center; }
+    .footer-social { justify-content: center; }
+  }
+
+  /* ============ WINDOWS PAGE ============ */
+  .sfl-wc {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .sfl-wc *, .sfl-wc *::before, .sfl-wc *::after { box-sizing: border-box; }
+  .sfl-wc a { text-decoration: none; }
+  .sfl-wc img { max-width: 100%; display: block; }
+
+  /* HERO */
+  .sfl-wc-hero {
+    position: relative;
+    min-height: 600px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(11,27,51,0.0) 0%,
+        rgba(11,27,51,0.0) 50%,
+        rgba(11,27,51,0.25) 75%,
+        rgba(11,27,51,0.45) 100%
+      ),
+      url('images/1 (4) (Medium).png');
+    background-color: #a0c4d8;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 6% 60px;
+  }
+  .sfl-wc-hero-inner { max-width: 680px; }
+  .sfl-wc-hero p {
+    color: rgba(255,255,255,0.95);
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 32px;
+    max-width: 560px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  }
+  .sfl-wc-btn-hero {
+    display: inline-flex;
+    align-items: center;
+    background: var(--green);
+    color: #fff !important;
+    padding: 18px 36px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 17px;
+    box-shadow: 0 8px 24px rgba(51,180,74,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .sfl-wc-btn-hero:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(51,180,74,0.45); }
+
+  /* PURE WATER */
+  .sfl-wc-pure {
+    background: var(--dark-blue);
+    padding: 70px 6%;
+    position: relative;
+    overflow: hidden;
+  }
+  .sfl-wc-pure::before {
+    content: ""; position: absolute; top: -80px; right: -80px;
+    width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(51,180,74,0.15), transparent 70%);
+    pointer-events: none;
+  }
+  .sfl-wc-pure::after {
+    content: ""; position: absolute; bottom: -60px; left: -60px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(32,183,210,0.12), transparent 70%);
+    pointer-events: none;
+  }
+  .sfl-wc-pure-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .sfl-wc-pure-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--green); margin-bottom: 14px;
+  }
+  .sfl-wc-pure-eyebrow span { display: inline-block; width: 28px; height: 2px; background: currentColor; }
+  .sfl-wc-pure-inner h2 { font-size: clamp(30px, 3.5vw, 44px); font-weight: 900; color: #fff; line-height: 1.1; margin: 0 0 24px; }
+  .sfl-wc-pure-inner p { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.8); margin: 0 0 16px; }
+  .sfl-wc-gif-float {
+    float: right;
+    width: 48%;
+    margin: 0 0 30px 40px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(11,27,51,0.3);
+  }
+  .sfl-wc-gif-float img { width: 100%; display: block; }
+  .sfl-wc-pure-bullets { list-style: none; margin: 18px 0 24px; padding: 0; }
+  .sfl-wc-pure-bullets li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 16px; line-height: 1.6; color: rgba(255,255,255,0.85);
+    padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .sfl-wc-pure-bullets li:last-child { border-bottom: none; }
+  .sfl-wc-pure-bullets li::before { content: "✓"; font-weight: 900; color: var(--green); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .sfl-wc-pure-link { color: var(--green) !important; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; transition: opacity 0.2s ease; }
+  .sfl-wc-pure-link:hover { opacity: 0.8; }
+
+  /* SERVICE SECTIONS */
+  .sfl-wc-section { padding: 70px 6%; position: relative; }
+  .sfl-wc-light { background: #fff; }
+  .sfl-wc-tint { background: var(--bg); }
+  .sfl-wc-section::before {
+    content: ""; position: absolute;
+    left: 0; top: 0; bottom: 0; width: 6px;
+    background: var(--green);
+  }
+  .sfl-wc-section-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .sfl-wc-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--green); margin-bottom: 14px;
+  }
+  .sfl-wc-eyebrow span { display: inline-block; width: 28px; height: 2px; background: currentColor; }
+  .sfl-wc-section-inner h2 { font-size: clamp(30px, 3.5vw, 44px); font-weight: 900; color: var(--dark-blue); line-height: 1.1; margin: 0 0 20px; }
+  .sfl-wc-section-inner h3 { font-size: 20px; font-weight: 800; color: var(--dark-blue); margin: 28px 0 10px; clear: both; }
+  .sfl-wc-section-inner p { font-size: 17px; line-height: 1.8; color: var(--muted); margin: 0 0 14px; }
+
+  .sfl-wc-photo-right {
+    float: right;
+    width: 50%;
+    margin: 0 0 30px 40px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(11,27,51,0.12);
+    height: 380px;
+  }
+  .sfl-wc-photo-left {
+    float: left;
+    width: 50%;
+    margin: 0 40px 30px 0;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(11,27,51,0.12);
+    height: 380px;
+  }
+
+  .sfl-wc-bullets { list-style: none; margin: 18px 0 24px; padding: 0; }
+  .sfl-wc-bullets li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 16px; line-height: 1.6; color: var(--text-main);
+    padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .sfl-wc-bullets li:last-child { border-bottom: none; }
+  .sfl-wc-bullets li::before { content: "✓"; font-weight: 900; color: var(--green); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+  .sfl-wc-callout {
+    border-left: 4px solid var(--green);
+    background: rgba(51,180,74,0.08);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px; margin: 22px 0;
+    font-size: 15px; line-height: 1.6; color: var(--text-main);
+    clear: both;
+  }
+  .sfl-wc-callout strong { color: var(--dark-blue); }
+
+  .sfl-wc-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 30px 0; clear: both; }
+  .sfl-wc-stat {
+    background: #fff; border-radius: 14px; padding: 18px 14px;
+    text-align: center; border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .sfl-wc-stat-num { font-size: 26px; font-weight: 900; color: var(--green); line-height: 1; margin-bottom: 4px; }
+  .sfl-wc-stat-label { font-size: 12px; color: var(--muted); line-height: 1.3; }
+
+  .sfl-wc-cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--green); color: #fff !important;
+    padding: 16px 30px; border-radius: 999px;
+    font-weight: 800; font-size: 16px; margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    clear: both; float: none;
+  }
+  .sfl-wc-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+  .sfl-wc-cta-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2.5; flex-shrink: 0; }
+
+  .sfl-wc-clearfix::after { content: ""; display: table; clear: both; }
+
+  /* BOTTOM CTA */
+  .sfl-wc-bottom-cta {
+    background: linear-gradient(135deg, #0b1b33 0%, #0e2744 50%, #0b1b33 100%);
+    padding: 80px 6%; text-align: center; position: relative; overflow: hidden;
+  }
+  .sfl-wc-bottom-cta::before {
+    content: ""; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(51,180,74,0.1), transparent 65%); pointer-events: none;
+  }
+  .sfl-wc-bottom-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .sfl-wc-bottom-inner h2 { font-size: clamp(32px, 4vw, 50px); font-weight: 900; color: #fff; margin: 0 0 16px; line-height: 1.1; }
+  .sfl-wc-bottom-inner p { font-size: 19px; color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 40px; }
+  .sfl-wc-bottom-btn {
+    display: inline-flex; align-items: center;
+    background: var(--green); color: #fff !important;
+    padding: 22px 48px; border-radius: 999px;
+    font-weight: 900; font-size: 19px;
+    box-shadow: 0 8px 28px rgba(51,180,74,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; margin-bottom: 30px;
+  }
+  .sfl-wc-bottom-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(51,180,74,0.5); }
+  .sfl-wc-contacts { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+  .sfl-wc-contacts a { color: rgba(255,255,255,0.75); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; transition: color 0.2s ease; }
+  .sfl-wc-contacts a:hover { color: var(--green); }
+  .sfl-wc-contacts svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .sfl-wc-photo-right, .sfl-wc-photo-left, .sfl-wc-gif-float {
+      float: none; width: 100%; margin: 0 0 30px 0; height: 300px;
+    }
+    .sfl-wc-hero { min-height: 480px; }
+    .sfl-wc-stat-row { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .sfl-wc-section, .sfl-wc-pure, .sfl-wc-bottom-cta { padding: 50px 24px; }
+    .sfl-wc-hero { padding: 0 24px 50px; min-height: 400px; }
+    .sfl-wc-stat-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">
+      <img src="images/lgo (Medium).png" alt="South Florida Window Cleaning">
+    </a>
+
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <div class="services-dropdown active">
+        <span>Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="services-menu">
+          <a href="/windows/" class="active">Windows</a>
+          <a href="/solar-panels/">Solar Panels</a>
+          <a href="/soft-washing/">Soft Washing</a>
+          <a href="/pressure-washing/">Pressure Washing</a>
+          <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        </div>
+      </div>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about-us/">About Us</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="tel:9549986178" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call us (954) 998-6178
+      </a>
+      <span class="header-hours">Mon–Fri, 8am–6pm</span>
+    </div>
+
+    <button class="header-burger" aria-label="Open menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+
+    <a href="tel:9549986178" class="header-phone-mobile">Call us (954) 998-6178</a>
+  </div>
+</header>
+
+<div class="sfl-wc">
+
+  <!-- HERO -->
+  <section class="sfl-wc-hero">
+    <div class="sfl-wc-hero-inner">
+      <p>Professional window cleaning for homes and businesses throughout Broward, Palm Beach, and Miami-Dade Counties. Streak-free results using our pure water system — guaranteed.</p>
+      <a class="sfl-wc-btn-hero" href="/contact/">Get Your Free On-Site Quote</a>
+    </div>
+  </section>
+
+  <!-- PURE WATER -->
+  <section class="sfl-wc-pure">
+    <div class="sfl-wc-pure-inner sfl-wc-clearfix">
+      <div class="sfl-wc-pure-eyebrow"><span></span>Our Method</div>
+      <h2>The Pure Water Difference</h2>
+      <div class="sfl-wc-gif-float">
+        <img src="images/1 (1) (Medium).gif" alt="Pure water window cleaning system in action South Florida">
+      </div>
+      <p>Most window cleaners use soap, detergents, or squeegee solutions. While that may sound clean, soap leaves an invisible residue on the glass that attracts dust, pollen, salt, and airborne debris — causing windows to look dirty again fast. In South Florida's humid, salty climate, that buildup happens faster than almost anywhere else.</p>
+      <p>Our pure water cleaning system runs ordinary tap water through a multi-stage filtration process that removes all minerals and impurities before it ever touches your windows. The result is water so pure it actively draws contaminants off the glass, frames, and surrounding edges — then evaporates completely clean.</p>
+      <p><strong style="color:#fff;">No soap film. No mineral spots. No streaky residue.</strong> Just clean, clear glass with a bright natural finish that stays cleaner longer.</p>
+      <p>Pure water is also safer. Water-fed poles allow many upper-floor windows to be cleaned from the ground — no ladders against your home or business.</p>
+      <ul class="sfl-wc-pure-bullets">
+        <li>No soap residue to attract dust and dirt</li>
+        <li>Stays cleaner longer than traditional soap-based cleaning</li>
+        <li>Streak-free, spot-free finish on exterior glass</li>
+        <li>Zero chemicals — safe around kids, pets, and landscaping</li>
+        <li>Reaches many upper-floor windows safely from the ground</li>
+        <li>Cleans glass, frames, and surrounding edges simultaneously</li>
+        <li>Ideal for South Florida — salt air, pollen, storms, and heat</li>
+      </ul>
+      <p>The science behind pure water cleaning is well established in chemistry. <a class="sfl-wc-pure-link" href="https://en.wikipedia.org/wiki/Deionized_water" target="_blank" rel="noopener">Learn more about deionized water →</a></p>
+    </div>
+  </section>
+
+  <!-- RESIDENTIAL -->
+  <section class="sfl-wc-section sfl-wc-light">
+    <div class="sfl-wc-section-inner sfl-wc-clearfix">
+      <div class="sfl-wc-eyebrow"><span></span>Residential Window Cleaning</div>
+      <h2>Your Home Deserves a Crystal-Clear View</h2>
+      <img class="sfl-wc-photo-right" src="images/1 (6) (Medium).jpg" alt="Residential window cleaning South Florida waterfront home">
+      <p>In South Florida, windows take a beating. Salt air from the Atlantic and Gulf leaves a white mineral haze on exterior glass. Afternoon thunderstorms bring pollen, dust, and hard water minerals. The intense subtropical sun bakes it all onto the surface — making glass look cloudy and dull even after ordinary cleaning.</p>
+      <p>We provide residential window cleaning for single-family homes, condos, townhomes, and estate properties throughout Broward, Palm Beach, and Miami-Dade Counties. Every visit includes frames, sills, screens, and accessible tracks — not just the glass.</p>
+
+      <h3>Exterior Window Cleaning</h3>
+      <p>We use our pure water system for exterior glass — lifting and rinsing away salt, pollen, mineral buildup, and debris without leaving soap residue. Water-fed poles allow us to reach many second-story windows safely from the ground.</p>
+
+      <h3>Interior Window Cleaning</h3>
+      <p>Interior cleaning uses a modified pure water method along with traditional detailing where needed. We work carefully around floors, furniture, and window treatments. Sliding glass doors, French doors, picture windows, and interior glass are cleaned to leave your view bright, clear, and natural.</p>
+
+      <ul class="sfl-wc-bullets">
+        <li>Sliding glass doors, French doors, and impact windows</li>
+        <li>Screens cleaned and reinstalled</li>
+        <li>Frames, sills, and accessible tracks wiped down</li>
+        <li>High exterior windows reached safely from the ground</li>
+        <li>Skylights and specialty glass</li>
+        <li>Single-family homes, condos, townhomes, and estates</li>
+      </ul>
+
+      <div class="sfl-wc-stat-row">
+        <div class="sfl-wc-stat"><div class="sfl-wc-stat-num">20+</div><div class="sfl-wc-stat-label">Years serving South Florida</div></div>
+        <div class="sfl-wc-stat"><div class="sfl-wc-stat-num">000</div><div class="sfl-wc-stat-label">TDS pure water rating</div></div>
+        <div class="sfl-wc-stat"><div class="sfl-wc-stat-num">0</div><div class="sfl-wc-stat-label">Streaks. Guaranteed.</div></div>
+      </div>
+
+      <div class="sfl-wc-callout">
+        <strong>Flexible Scheduling</strong> — Monthly, bi-monthly, and quarterly residential plans available. More affordable than you might think — we can build a schedule around your home, location, and budget.
+      </div>
+      <div class="sfl-wc-callout">
+        <strong>Home Rinse Service</strong> — A light exterior rinse between deeper cleanings to clear bugs, cobwebs, and debris from soffits, eaves, and exterior walls. A popular add-on for monthly and quarterly customers.
+      </div>
+      <a class="sfl-wc-cta-btn" href="/contact/">
+        Schedule a Free On-Site Quote
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMMERCIAL -->
+  <section class="sfl-wc-section sfl-wc-tint">
+    <div class="sfl-wc-section-inner sfl-wc-clearfix">
+      <div class="sfl-wc-eyebrow"><span></span>Commercial Window Cleaning</div>
+      <h2>First Impressions Start With Clean Glass</h2>
+      <img class="sfl-wc-photo-left" src="images/1 (4) (Medium).jpg" alt="Commercial window cleaning South Florida">
+      <p>Your building says something about your business before a customer ever walks through the door. Clean storefront glass and bright entryways create a professional first impression. Dirty or streaked windows signal neglect — even for a well-run business.</p>
+      <p>We provide commercial window cleaning for storefronts, office buildings, restaurants, auto dealerships, medical offices, hotels, HOA common areas, and property-managed buildings throughout South Florida. We work around your schedule — early morning, evenings, or weekends — to keep disruption to a minimum.</p>
+
+      <h3>Exterior Commercial Glass</h3>
+      <p>Our pure water system is ideal for storefronts, office windows, upper glass, and large commercial properties. It lifts and rinses away dirt, salt residue, and buildup without soap residue — and allows many exterior windows to be cleaned safely from the ground in customer-facing areas.</p>
+
+      <h3>Interior Commercial Glass</h3>
+      <p>Interior commercial cleaning is handled with care and efficiency. We clean lobby glass, doors, partitions, showroom windows, and interior-facing glass while working around furniture, displays, customers, and employees.</p>
+
+      <ul class="sfl-wc-bullets">
+        <li>Storefront windows and retail glass</li>
+        <li>Office buildings and professional suites</li>
+        <li>Entry doors, lobby glass, and interior partitions</li>
+        <li>Auto dealerships and showroom glass</li>
+        <li>Restaurants, hotels, and hospitality properties</li>
+        <li>Medical offices and professional facilities</li>
+        <li>HOA common areas and property-managed buildings</li>
+        <li>Flexible scheduling — before or after business hours</li>
+      </ul>
+
+      <div class="sfl-wc-callout">
+        <strong>Recurring Service Plans</strong> — Monthly, bi-monthly, and quarterly commercial plans available. No long-term contracts required.
+      </div>
+      <a class="sfl-wc-cta-btn" href="/contact/">
+        Get a Commercial Service Quote
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="sfl-wc-bottom-cta">
+    <div class="sfl-wc-bottom-inner">
+      <h2>Ready for Crystal-Clear Windows?</h2>
+      <p>We offer free on-site estimates for homes and businesses throughout South Florida. We will take a look, give you a clear quote, and answer any questions — no pressure, no surprises.</p>
+      <a class="sfl-wc-bottom-btn" href="/contact/">Schedule a Free On-Site Quote</a>
+      <div class="sfl-wc-contacts">
+        <a href="tel:9549986178">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (954) 998-6178
+        </a>
+        <a href="mailto:info@sflwindows.com">
+          <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+          info@sflwindows.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-topbar"></div>
+  <div class="footer-main">
+
+    <div class="footer-top-row">
+
+      <nav class="footer-nav-grid">
+        <a href="/">Home</a>
+        <a href="/soft-washing/">Soft Washing</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/windows/">Windows</a>
+        <a href="/pressure-washing/">Pressure Washing</a>
+        <a href="/contact/">Contact</a>
+        <a href="/solar-panels/">Solar Panels</a>
+        <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        <a href="/about-us/">About Us</a>
+      </nav>
+
+      <div class="footer-center">
+        <a href="/" class="footer-logo"><img src="images/lgo (Medium).png" alt="South Florida Window Cleaning"></a>
+        <div class="footer-center-contact">
+          <a href="tel:9549986178">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call us (954) 998-6178
+          </a>
+          <a href="mailto:info@sflwindows.com">
+            <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+            info@sflwindows.com
+          </a>
+          <span>Mon–Fri, 8am–6pm</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
