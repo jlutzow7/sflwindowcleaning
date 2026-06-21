@@ -132,7 +132,7 @@
     }
   }
 
-  /* ============ FOOTER (redesigned) ============ */
+  /* ============ FOOTER (3-column, shorter) ============ */
   .site-footer {
     background: #fff;
   }
@@ -142,27 +142,28 @@
   .footer-main {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 44px 4% 0;
+    padding: 32px 4% 0;
   }
 
   .footer-top-row {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: flex-start;
-    padding-bottom: 28px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 24px;
   }
 
+  /* LEFT THIRD — nav */
   .footer-nav-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    column-gap: 48px;
-    row-gap: 16px;
+    column-gap: 18px;
+    row-gap: 10px;
     align-content: start;
   }
 
   .footer-nav-grid a {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--blue);
     font-weight: 700;
     white-space: nowrap;
@@ -170,28 +171,45 @@
 
   .footer-nav-grid a:hover { text-decoration: underline; }
 
-  .footer-side {
+  /* CENTER THIRD — logo + contact */
+  .footer-center {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    gap: 14px;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
   }
 
-  .footer-logo img { height: 76px; }
+  .footer-logo img { height: 56px; }
 
-  .footer-side-contact {
+  .footer-center-contact {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    font-size: 14px;
+    gap: 4px;
+    font-size: 13px;
     color: var(--muted);
   }
 
-  .footer-side-contact a { color: var(--muted); }
-  .footer-side-contact a:hover { color: var(--blue); }
+  .footer-center-contact a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+  }
 
-  .footer-side-contact svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; fill: var(--blue); }
+  .footer-center-contact a:hover { color: var(--blue); }
+
+  .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
+
+  /* RIGHT THIRD — service text + social */
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+  }
 
   .footer-service-text {
     font-size: 14px;
@@ -199,25 +217,26 @@
     line-height: 1.5;
   }
 
-  .footer-social { display: flex; gap: 16px; }
+  .footer-social { display: flex; gap: 14px; }
 
   .footer-social a { color: var(--muted); }
-  .footer-social svg { width: 20px; height: 20px; fill: currentColor; }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
   .footer-social a:hover { color: var(--blue); }
 
   .footer-copyright {
     background: #6b7d96;
     color: #fff;
     text-align: center;
-    padding: 14px;
-    font-size: 13px;
-    margin-top: 24px;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: 16px;
   }
 
   @media (max-width: 700px) {
     .footer-top-row { grid-template-columns: 1fr; text-align: center; }
-    .footer-nav-grid { grid-template-columns: 1fr; justify-items: center; gap: 10px; }
-    .footer-side { align-items: center; text-align: center; }
+    .footer-nav-grid { grid-template-columns: 1fr; justify-items: center; gap: 8px; }
+    .footer-right { align-items: center; text-align: center; }
+    .footer-social { justify-content: center; }
   }
 
   .sfl-homepage { width: 100%; overflow-x: hidden; }
@@ -839,6 +858,8 @@
   <div class="footer-main">
 
     <div class="footer-top-row">
+
+      <!-- LEFT THIRD: nav -->
       <nav class="footer-nav-grid">
         <a href="/">Home</a>
         <a href="/soft-washing/">Soft Washing</a>
@@ -851,10 +872,10 @@
         <a href="/about-us/">About Us</a>
       </nav>
 
-      <div class="footer-side">
+      <!-- CENTER THIRD: logo + contact -->
+      <div class="footer-center">
         <a href="/" class="footer-logo"><img src="images/lgo (Medium).png" alt="South Florida Window Cleaning"></a>
-
-        <div class="footer-side-contact">
+        <div class="footer-center-contact">
           <a href="tel:9549986178">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call us (954) 998-6178
@@ -865,15 +886,18 @@
           </a>
           <span>Mon–Fri, 8am–6pm</span>
         </div>
+      </div>
 
-        <p class="footer-service-text">Proudly serving Broward, Palm Beach,<br>and Miami-Dade Counties.</p>
-
+      <!-- RIGHT THIRD: service area + social -->
+      <div class="footer-right">
+        <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
         </div>
       </div>
+
     </div>
 
   </div>
