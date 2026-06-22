@@ -1,1 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Washing South Florida | Driveways, Pool Decks & Pavers | SFL Window Cleaning</title>
+<meta name="description" content="Professional pressure washing for driveways, pool decks, pavers, and hard surfaces throughout Broward, Palm Beach, and Miami-Dade Counties. Free on-site quotes.">
+<link rel="canonical" href="https://sflwindowcleaning.com/pressure-washing/">
+<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/lgo.webp">
 
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pressure Washing South Florida | Driveways, Pool Decks & Pavers">
+<meta property="og:description" content="Professional pressure washing for driveways, pool decks, pavers, and hard surfaces throughout Broward, Palm Beach, and Miami-Dade Counties.">
+<meta property="og:url" content="https://sflwindowcleaning.com/pressure-washing/">
+<meta property="og:image" content="https://sflwindowcleaning.com/images/pwh.webp">
+<meta property="og:site_name" content="South Florida Window Cleaning">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pressure Washing South Florida | Driveways, Pool Decks & Pavers">
+<meta name="twitter:description" content="Professional pressure washing for driveways, pool decks, pavers, and hard surfaces throughout Broward, Palm Beach, and Miami-Dade Counties.">
+<meta name="twitter:image" content="https://sflwindowcleaning.com/images/pwh.webp">
+
+<!-- Service Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Pressure Washing",
+  "name": "Pressure Washing South Florida",
+  "url": "https://sflwindowcleaning.com/pressure-washing/",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "South Florida Window Cleaning",
+    "image": "https://sflwindowcleaning.com/images/lgo.webp",
+    "telephone": "+19549986178",
+    "email": "info@sflwindows.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Davie",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/sflwindowcleaning",
+      "https://www.instagram.com/sflwindowcleaning/",
+      "https://www.linkedin.com/in/sflwindows/",
+      "https://x.com/sfl_windows"
+    ]
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --green: #33b44a;
+    --blue: #1479c9;
+    --orange: #f26d21;
+    --teal: #20b7d2;
+    --purple: #7c3aed;
+    --dark-blue: #0b1b33;
+    --text-main: #1a2639;
+    --muted: #4a5b6d;
+    --soft-bg: #f6f9fc;
+    --bg: #f4f7fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; color: var(--text-main); width: 100%; overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* HEADER */
+  .site-header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #eef4fa;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+  .header-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 4%; gap: 20px;
+  }
+  .header-logo img { height: 56px; }
+  .header-nav {
+    display: flex; align-items: center; justify-content: center;
+    flex: 1; gap: 46px;
+  }
+  .header-nav a { font-weight: 700; font-size: 16px; color: var(--blue); position: relative; }
+  .header-nav a.active { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
+  .services-dropdown { position: relative; }
+  .services-dropdown > span {
+    font-weight: 700; font-size: 16px; color: var(--blue);
+    cursor: pointer; display: flex; align-items: center; gap: 4px;
+  }
+  .services-dropdown > span.active { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
+  .services-menu {
+    display: none; position: absolute; top: 100%; left: 0;
+    background: #fff; border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(11,27,51,0.15);
+    padding: 8px 0; min-width: 200px; z-index: 10;
+  }
+  .services-dropdown:hover .services-menu { display: block; }
+  .services-menu a { display: block; padding: 10px 20px; font-size: 14px; color: var(--text-main); font-weight: 600; }
+  .services-menu a:hover { background: var(--soft-bg); color: var(--blue); }
+  .services-menu a.active { color: var(--blue); font-weight: 800; }
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); }
+  .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
+  .header-hours { font-size: 12px; color: var(--muted); }
+  .header-burger { display: none; background: none; border: none; cursor: pointer; }
+  .header-phone-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .header-inner { flex-wrap: wrap; }
+    .header-nav, .header-right { display: none; }
+    .header-burger { display: block; }
+    .header-phone-mobile {
+      display: block; width: 100%; text-align: center;
+      padding: 8px 0 4px; border-top: 1px solid rgba(11,27,51,0.08);
+      font-weight: 800; color: var(--blue);
+    }
+  }
+
+  /* FOOTER */
+  .site-footer { background: #fff; }
+  .footer-topbar { background: var(--dark-blue); height: 8px; }
+  .footer-main { max-width: 1400px; margin: 0 auto; padding: 32px 4% 0; }
+  .footer-top-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; align-items: start; padding-bottom: 24px;
+  }
+  .footer-nav-grid {
+    display: grid; grid-template-columns: repeat(3, auto);
+    column-gap: 18px; row-gap: 10px; align-content: start;
+  }
+  .footer-nav-grid a { font-size: 13px; color: var(--blue); font-weight: 700; white-space: nowrap; }
+  .footer-nav-grid a:hover { text-decoration: underline; }
+  .footer-center { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+  .footer-logo img { height: 56px; }
+  .footer-center-contact { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+  .footer-center-contact a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+  .footer-center-contact a:hover { color: var(--blue); }
+  .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 14px; }
+  .footer-service-text { font-size: 14px; color: var(--muted); line-height: 1.5; }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social a { color: var(--muted); }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a:hover { color: var(--blue); }
+  .footer-copyright { background: #6b7d96; color: #fff; text-align: center; padding: 12px; font-size: 12px; margin-top: 16px; }
+
+  @media (max-width: 700px) {
+    .footer-top-row { grid-template-columns: 1fr; text-align: center; }
+    .footer-nav-grid { grid-template-columns: 1fr; justify-items: center; gap: 8px; }
+    .footer-right { align-items: center; text-align: center; }
+    .footer-social { justify-content: center; }
+  }
+
+  /* PAGE STYLES */
+  .pw-page { width: 100%; overflow-x: hidden; }
+  .pw-page * { box-sizing: border-box; }
+
+  /* HERO */
+  .pw-hero {
+    position: relative;
+    min-height: 700px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(11,27,51,0.0) 0%,
+        rgba(11,27,51,0.0) 50%,
+        rgba(11,27,51,0.25) 75%,
+        rgba(11,27,51,0.45) 100%
+      ),
+      url('https://sflwindowcleaning.com/images/pwh.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 6% 60px;
+  }
+  .pw-hero-inner { max-width: 680px; }
+  .pw-hero-inner p {
+    color: rgba(255,255,255,0.95);
+    font-size: 18px; line-height: 1.7;
+    margin: 0 0 32px; max-width: 560px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  }
+  .pw-btn-hero {
+    display: inline-flex; align-items: center;
+    background: var(--blue); color: #fff !important;
+    padding: 18px 36px; border-radius: 999px;
+    font-weight: 800; font-size: 17px;
+    box-shadow: 0 8px 24px rgba(20,121,201,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .pw-btn-hero:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(20,121,201,0.45); }
+
+  /* SECTIONS */
+  .pw-section { padding: 56px 6%; position: relative; }
+  .pw-light { background: #fff; }
+  .pw-tint { background: var(--bg); }
+  .pw-section::before {
+    content: ""; position: absolute;
+    left: 0; top: 0; bottom: 0; width: 6px;
+    background: var(--blue);
+  }
+  .pw-inner { max-width: 1160px; margin: 0 auto; overflow: hidden; }
+
+  .pw-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 14px;
+  }
+  .pw-eyebrow span { display: inline-block; width: 28px; height: 2px; background: currentColor; }
+
+  .pw-inner h2 { font-size: clamp(30px, 3.5vw, 44px); font-weight: 900; color: var(--dark-blue); line-height: 1.1; margin: 0 0 20px; }
+  .pw-inner p { font-size: 17px; line-height: 1.8; color: var(--muted); margin: 0 0 14px; }
+
+  /* FLOATING PHOTOS */
+  .pw-photo-right {
+    float: right;
+    width: 52%; height: 500px;
+    margin: 0 0 30px 40px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(11,27,51,0.12);
+  }
+  .pw-photo-left {
+    float: left;
+    width: 52%; height: 500px;
+    margin: 0 40px 30px 0;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 20px 50px rgba(11,27,51,0.12);
+  }
+
+  /* BEFORE/AFTER PAIR */
+  .pw-before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+    clear: both;
+  }
+  .pw-ba-wrap { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 50px rgba(11,27,51,0.12); }
+  .pw-ba-wrap img { width: 100%; height: 400px; object-fit: cover; display: block; }
+  .pw-ba-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 12px 18px;
+    background: linear-gradient(0deg, rgba(11,27,51,0.85), transparent);
+    color: #fff; font-weight: 800; font-size: 14px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+
+  /* TWO-COLUMN LISTS */
+  .pw-lists-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 20px 0 24px;
+    clear: both;
+  }
+  .pw-list-col h3 { font-size: 20px; font-weight: 800; color: var(--dark-blue); margin: 0 0 12px; }
+  .pw-bullets { list-style: none; margin: 0; padding: 0; }
+  .pw-bullets li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 16px; line-height: 1.6; color: var(--text-main);
+    padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .pw-bullets li:last-child { border-bottom: none; }
+  .pw-bullets li::before { content: "✓"; font-weight: 900; color: var(--blue); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+  .pw-callout {
+    border-left: 4px solid var(--blue);
+    background: rgba(20,121,201,0.08);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px; margin: 22px 0;
+    font-size: 15px; line-height: 1.6; color: var(--text-main);
+    clear: both;
+  }
+  .pw-callout strong { color: var(--dark-blue); }
+
+  .pw-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 30px 0; clear: both; }
+  .pw-stat {
+    background: #fff; border-radius: 14px; padding: 18px 14px;
+    text-align: center; border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .pw-stat-num { font-size: 26px; font-weight: 900; color: var(--blue); line-height: 1; margin-bottom: 4px; }
+  .pw-stat-label { font-size: 12px; color: var(--muted); line-height: 1.3; }
+
+  .pw-cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--blue); color: #fff !important;
+    padding: 16px 30px; border-radius: 999px;
+    font-weight: 800; font-size: 16px; margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    clear: both; display: inline-flex;
+  }
+  .pw-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+  .pw-cta-btn svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2.5; flex-shrink: 0; }
+
+  .pw-clearfix::after { content: ""; display: table; clear: both; }
+
+  /* BOTTOM CTA */
+  .pw-bottom-cta {
+    background: linear-gradient(135deg, #0b1b33 0%, #0e2744 50%, #0b1b33 100%);
+    padding: 80px 6%; text-align: center; position: relative; overflow: hidden;
+  }
+  .pw-bottom-cta::before {
+    content: ""; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(20,121,201,0.1), transparent 65%);
+    pointer-events: none;
+  }
+  .pw-bottom-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .pw-bottom-inner h2 { font-size: clamp(32px, 4vw, 50px); font-weight: 900; color: #fff; margin: 0 0 16px; line-height: 1.1; }
+  .pw-bottom-inner p { font-size: 19px; color: rgba(255,255,255,0.85); line-height: 1.6; margin: 0 0 36px; }
+  .pw-bottom-btn {
+    display: inline-flex; align-items: center;
+    background: var(--blue); color: #fff !important;
+    padding: 22px 48px; border-radius: 999px;
+    font-weight: 900; font-size: 19px;
+    box-shadow: 0 8px 28px rgba(20,121,201,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 28px;
+  }
+  .pw-bottom-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(20,121,201,0.5); }
+  .pw-contacts { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+  .pw-contacts a { color: rgba(255,255,255,0.75); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; transition: color 0.2s ease; }
+  .pw-contacts a:hover { color: var(--blue); }
+  .pw-contacts svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .pw-photo-right, .pw-photo-left { float: none; width: 100%; margin: 0 0 24px 0; height: 300px; }
+    .pw-before-after { grid-template-columns: 1fr; }
+    .pw-lists-row { grid-template-columns: 1fr; gap: 24px; }
+    .pw-hero { min-height: 500px; }
+  }
+  @media (max-width: 600px) {
+    .pw-section { padding: 48px 24px; }
+    .pw-bottom-cta { padding: 60px 24px; }
+    .pw-hero { padding: 0 24px 50px; min-height: 420px; }
+    .pw-stat-row { grid-template-columns: 1fr 1fr; }
+    .pw-ba-wrap img { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">
+      <img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning">
+    </a>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <div class="services-dropdown">
+        <span class="active">Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="services-menu">
+          <a href="/windows/">Windows</a>
+          <a href="/solar-panels/">Solar Panels</a>
+          <a href="/soft-washing/">Soft Washing</a>
+          <a href="/pressure-washing/" class="active">Pressure Washing</a>
+          <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        </div>
+      </div>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about-us/">About Us</a>
+    </nav>
+    <div class="header-right">
+      <a href="tel:9549986178" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call us (954) 998-6178
+      </a>
+      <span class="header-hours">Mon–Fri, 8am–6pm</span>
+    </div>
+    <button class="header-burger" aria-label="Open menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="tel:9549986178" class="header-phone-mobile">Call us (954) 998-6178</a>
+  </div>
+</header>
+
+<div class="pw-page">
+
+  <!-- HERO -->
+  <section class="pw-hero">
+    <div class="pw-hero-inner">
+      <p>Professional pressure washing for driveways, sidewalks, pool decks, pavers, and hard surfaces throughout Broward, Palm Beach, and Miami-Dade Counties. Restore your hardscapes to like-new condition.</p>
+      <a class="pw-btn-hero" href="/contact/">Get Your Free On-Site Quote</a>
+    </div>
+  </section>
+
+  <!-- RESTORE YOUR SURFACES -->
+  <section class="pw-section pw-light">
+    <div class="pw-inner pw-clearfix">
+      <div class="pw-eyebrow"><span></span>Pressure Washing</div>
+      <h2>Restore Your Hard Surfaces to Like-New Condition</h2>
+      <img class="pw-photo-right" src="https://sflwindowcleaning.com/images/pw1.webp" alt="Clean pavers and sidewalk after pressure washing South Florida">
+      <p>South Florida's climate is relentless on hard surfaces. Heat, humidity, frequent rain, and organic growth from surrounding landscaping combine to create some of the worst conditions for driveways, walkways, pool decks, and pavers anywhere in the country. What starts as a light gray or green tint on concrete can become a thick layer of algae, mold, and ground-in grime that makes your property look neglected — and dangerously slippery when wet.</p>
+      <p>Professional pressure washing removes years of buildup in a single visit, restoring the appearance of your hardscapes and making surfaces safer to walk on. We use commercial-grade equipment calibrated to match the surface being cleaned — enough pressure to cut through heavy buildup without etching concrete, damaging pavers, or disturbing joint sand.</p>
+      <p>The combination of irrigation overspray, summer storm runoff, and constant humidity means hard surfaces in South Florida accumulate organic growth faster than almost anywhere else. Rust stains from well water irrigation are common throughout the region. Algae and mold thrive in the shade of overhanging trees and landscape beds. Pool decks develop slippery organic growth from constant moisture exposure. Regular pressure washing removes all of it and keeps your property looking well maintained year round.</p>
+      <div class="pw-stat-row">
+        <div class="pw-stat"><div class="pw-stat-num">20+</div><div class="pw-stat-label">Years serving South Florida</div></div>
+        <div class="pw-stat"><div class="pw-stat-num">Safe</div><div class="pw-stat-label">Calibrated pressure for every surface</div></div>
+        <div class="pw-stat"><div class="pw-stat-num">100%</div><div class="pw-stat-label">Residential &amp; commercial</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE/AFTER -->
+  <section class="pw-section pw-tint">
+    <div class="pw-inner pw-clearfix">
+      <div class="pw-eyebrow"><span></span>Before &amp; After</div>
+      <h2>See the Difference Professional Pressure Washing Makes</h2>
+      <p>These photos are from an actual job at a commercial property in South Florida. The pavers and sidewalk had years of algae, mold, and organic buildup that had turned the surfaces nearly black. After a single professional pressure washing visit, the surfaces were restored to their original appearance.</p>
+      <div class="pw-before-after">
+        <div class="pw-ba-wrap">
+          <img src="https://sflwindowcleaning.com/images/pw3.webp" alt="Before pressure washing — pavers covered in algae and grime">
+          <div class="pw-ba-label">Before</div>
+        </div>
+        <div class="pw-ba-wrap">
+          <img src="https://sflwindowcleaning.com/images/pw4.webp" alt="After pressure washing — clean pavers restored to like-new condition">
+          <div class="pw-ba-label">After</div>
+        </div>
+      </div>
+      <div class="pw-callout">
+        <strong>One visit.</strong> No chemicals left behind. No damage to the pavers or surrounding landscaping. Just clean, restored hardscapes that look like new.
+      </div>
+    </div>
+  </section>
+
+  <!-- SURFACES WE CLEAN -->
+  <section class="pw-section pw-light">
+    <div class="pw-inner pw-clearfix">
+      <div class="pw-eyebrow"><span></span>Surfaces We Clean</div>
+      <h2>The Right Pressure for Every Surface</h2>
+      <img class="pw-photo-right" src="https://sflwindowcleaning.com/images/pw2.webp" alt="Pressure washing driveway and pavers South Florida">
+      <p>Not every surface can handle the same pressure. Concrete driveways can handle higher pressure than brick pavers. Travertine requires a gentler touch than poured concrete. Pool decks with painted or coated surfaces need to be approached differently than raw concrete. Using the wrong pressure on the wrong surface causes permanent damage that is expensive to repair.</p>
+      <p>We assess every surface before we begin and calibrate our equipment accordingly. The goal is always the same — the most effective clean possible without causing any damage to the surface or surrounding areas.</p>
+
+      <div class="pw-lists-row">
+        <div class="pw-list-col">
+          <h3>Residential Surfaces</h3>
+          <ul class="pw-bullets">
+            <li>Concrete driveways and garage aprons</li>
+            <li>Brick pavers and travertine driveways</li>
+            <li>Pool decks and surrounding areas</li>
+            <li>Patio slabs and outdoor living areas</li>
+            <li>Sidewalks and walkways</li>
+            <li>Screen enclosure frames and entryways</li>
+          </ul>
+        </div>
+        <div class="pw-list-col">
+          <h3>Commercial Surfaces</h3>
+          <ul class="pw-bullets">
+            <li>Commercial parking areas and entrances</li>
+            <li>Sidewalks and public walkways</li>
+            <li>Loading docks and service areas</li>
+            <li>HOA common areas and shared hardscapes</li>
+            <li>Restaurant patios and outdoor seating areas</li>
+            <li>Retail storefronts and building entryways</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pw-callout">
+        <strong>How often?</strong> Most South Florida driveways and pool decks benefit from pressure washing every 12 to 24 months. Properties with heavy tree cover, near landscaping, or with irrigation overspray may need more frequent service. We can assess your property and recommend a schedule.
+      </div>
+
+      <a class="pw-cta-btn" href="/contact/">
+        Schedule a Free On-Site Quote
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="pw-bottom-cta">
+    <div class="pw-bottom-inner">
+      <h2>Ready to Restore Your Hard Surfaces?</h2>
+      <p>We offer free on-site estimates for pressure washing throughout South Florida. We will take a look at your surfaces, explain what we recommend, and give you a clear quote — no pressure, no surprises.</p>
+      <a class="pw-bottom-btn" href="/contact/">Schedule a Free On-Site Quote</a>
+      <div class="pw-contacts">
+        <a href="tel:+19549986178">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          Call (954) 998-6178
+        </a>
+        <a href="mailto:info@sflwindows.com">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          info@sflwindows.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-topbar"></div>
+  <div class="footer-main">
+    <div class="footer-top-row">
+      <nav class="footer-nav-grid">
+        <a href="/">Home</a>
+        <a href="/soft-washing/">Soft Washing</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/windows/">Windows</a>
+        <a href="/pressure-washing/">Pressure Washing</a>
+        <a href="/contact/">Contact</a>
+        <a href="/solar-panels/">Solar Panels</a>
+        <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        <a href="/about-us/">About Us</a>
+      </nav>
+      <div class="footer-center">
+        <a href="/" class="footer-logo"><img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning"></a>
+        <div class="footer-center-contact">
+          <a href="tel:9549986178">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call us (954) 998-6178
+          </a>
+          <a href="mailto:info@sflwindows.com">
+            <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+            info@sflwindows.com
+          </a>
+          <span>Mon–Fri, 8am–6pm</span>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/sflwindowcleaning" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
+          <a href="https://www.instagram.com/sflwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
+          <a href="https://www.linkedin.com/in/sflwindows/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
