@@ -1,1 +1,554 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | South Florida Window Cleaning | Free On-Site Quotes</title>
+<meta name="description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties. Call (954) 998-6178 or fill out the form.">
+<link rel="canonical" href="https://sflwindowcleaning.com/contact/">
+<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/lgo.webp">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Us | South Florida Window Cleaning | Free On-Site Quotes">
+<meta property="og:description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties.">
+<meta property="og:url" content="https://sflwindowcleaning.com/contact/">
+<meta property="og:image" content="https://sflwindowcleaning.com/images/van.webp">
+<meta property="og:site_name" content="South Florida Window Cleaning">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Us | South Florida Window Cleaning | Free On-Site Quotes">
+<meta name="twitter:description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties.">
+<meta name="twitter:image" content="https://sflwindowcleaning.com/images/van.webp">
+
+<!-- LocalBusiness Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "South Florida Window Cleaning",
+  "image": "https://sflwindowcleaning.com/images/lgo.webp",
+  "url": "https://sflwindowcleaning.com/",
+  "telephone": "+19549986178",
+  "email": "info@sflwindows.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Davie",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/sflwindowcleaning",
+    "https://www.instagram.com/sflwindowcleaning/",
+    "https://www.linkedin.com/in/sflwindows/",
+    "https://x.com/sfl_windows"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --green: #33b44a;
+    --blue: #1479c9;
+    --orange: #f26d21;
+    --teal: #20b7d2;
+    --purple: #7c3aed;
+    --dark-blue: #0b1b33;
+    --text-main: #1a2639;
+    --muted: #4a5b6d;
+    --soft-bg: #f6f9fc;
+    --bg: #f4f7fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; color: var(--text-main); width: 100%; overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* HEADER */
+  .site-header {
+    position: sticky; top: 0; z-index: 1000;
+    background: #eef4fa;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+  .header-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 4%; gap: 20px;
+  }
+  .header-logo img { height: 56px; }
+  .header-nav {
+    display: flex; align-items: center; justify-content: center;
+    flex: 1; gap: 46px;
+  }
+  .header-nav a { font-weight: 700; font-size: 16px; color: var(--blue); position: relative; }
+  .header-nav a.active { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
+  .services-dropdown { position: relative; }
+  .services-dropdown > span {
+    font-weight: 700; font-size: 16px; color: var(--blue);
+    cursor: pointer; display: flex; align-items: center; gap: 4px;
+  }
+  .services-menu {
+    display: none; position: absolute; top: 100%; left: 0;
+    background: #fff; border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(11,27,51,0.15);
+    padding: 8px 0; min-width: 200px; z-index: 10;
+  }
+  .services-dropdown:hover .services-menu { display: block; }
+  .services-menu a { display: block; padding: 10px 20px; font-size: 14px; color: var(--text-main); font-weight: 600; }
+  .services-menu a:hover { background: var(--soft-bg); color: var(--blue); }
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); }
+  .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
+  .header-hours { font-size: 12px; color: var(--muted); }
+  .header-burger { display: none; background: none; border: none; cursor: pointer; }
+  .header-phone-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    .header-inner { flex-wrap: wrap; }
+    .header-nav, .header-right { display: none; }
+    .header-burger { display: block; }
+    .header-phone-mobile {
+      display: block; width: 100%; text-align: center;
+      padding: 8px 0 4px; border-top: 1px solid rgba(11,27,51,0.08);
+      font-weight: 800; color: var(--blue);
+    }
+  }
+
+  /* FOOTER */
+  .site-footer { background: #fff; }
+  .footer-topbar { background: var(--dark-blue); height: 8px; }
+  .footer-main { max-width: 1400px; margin: 0 auto; padding: 32px 4% 0; }
+  .footer-top-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; align-items: start; padding-bottom: 24px;
+  }
+  .footer-nav-grid {
+    display: grid; grid-template-columns: repeat(3, auto);
+    column-gap: 18px; row-gap: 10px; align-content: start;
+  }
+  .footer-nav-grid a { font-size: 13px; color: var(--blue); font-weight: 700; white-space: nowrap; }
+  .footer-nav-grid a:hover { text-decoration: underline; }
+  .footer-center { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+  .footer-logo img { height: 56px; }
+  .footer-center-contact { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+  .footer-center-contact a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+  .footer-center-contact a:hover { color: var(--blue); }
+  .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 14px; }
+  .footer-service-text { font-size: 14px; color: var(--muted); line-height: 1.5; }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social a { color: var(--muted); }
+  .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+  .footer-social a:hover { color: var(--blue); }
+  .footer-copyright { background: #6b7d96; color: #fff; text-align: center; padding: 12px; font-size: 12px; margin-top: 16px; }
+
+  @media (max-width: 700px) {
+    .footer-top-row { grid-template-columns: 1fr; text-align: center; }
+    .footer-nav-grid { grid-template-columns: 1fr; justify-items: center; gap: 8px; }
+    .footer-right { align-items: center; text-align: center; }
+    .footer-social { justify-content: center; }
+  }
+
+  /* PAGE STYLES */
+  .contact-page { width: 100%; overflow-x: hidden; }
+  .contact-page * { box-sizing: border-box; }
+
+  /* HERO */
+  .contact-hero {
+    position: relative;
+    min-height: 420px;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(11,27,51,0.15) 0%,
+        rgba(11,27,51,0.15) 40%,
+        rgba(11,27,51,0.55) 75%,
+        rgba(11,27,51,0.78) 100%
+      ),
+      url('https://sflwindowcleaning.com/images/van.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 6% 50px;
+  }
+  .contact-hero-inner { max-width: 680px; }
+  .contact-hero-inner h1 {
+    color: #fff;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 900; line-height: 1.05;
+    margin: 0 0 12px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  .contact-hero-inner p {
+    color: rgba(255,255,255,0.92);
+    font-size: 17px; line-height: 1.6; margin: 0;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    max-width: 560px;
+  }
+
+  /* MAIN */
+  .contact-main { background: var(--bg); padding: 56px 6%; }
+  .contact-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.6fr 1fr;
+    gap: 60px; align-items: start;
+  }
+
+  /* FORM WRAP */
+  .contact-form-wrap {
+    background: #fff; border-radius: 20px;
+    padding: 46px 40px;
+    box-shadow: 0 12px 40px rgba(11,27,51,0.08);
+    border-top: 5px solid var(--green);
+  }
+  .contact-form-wrap h2 {
+    font-size: clamp(24px, 3vw, 32px); font-weight: 900;
+    color: var(--dark-blue); margin: 0 0 8px; line-height: 1.1;
+  }
+  .contact-form-wrap > p {
+    font-size: 16px; color: var(--muted);
+    margin: 0 0 28px; line-height: 1.6;
+  }
+
+  /* FORM ELEMENTS */
+  .sfl-form { display: flex; flex-direction: column; gap: 18px; }
+  .sfl-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sfl-form-group { display: flex; flex-direction: column; gap: 6px; }
+  .sfl-form-group label { font-size: 14px; font-weight: 700; color: var(--dark-blue); }
+  .sfl-form-group .required { color: var(--green); margin-left: 2px; }
+  .sfl-form-group input,
+  .sfl-form-group select,
+  .sfl-form-group textarea {
+    border: 1.5px solid rgba(0,0,0,0.15);
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 15px; font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-main); width: 100%; background: #fff;
+    appearance: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .sfl-form-group input:focus,
+  .sfl-form-group select:focus,
+  .sfl-form-group textarea:focus {
+    border-color: var(--green); outline: none;
+    box-shadow: 0 0 0 3px rgba(51,180,74,0.12);
+  }
+  .sfl-form-group textarea { min-height: 130px; resize: vertical; }
+  .sfl-form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a5b6d' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+  .sfl-form-submit {
+    background: var(--green); color: #fff;
+    border: none; border-radius: 999px;
+    padding: 16px 40px; font-size: 16px; font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer; align-self: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 20px rgba(51,180,74,0.3);
+  }
+  .sfl-form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(51,180,74,0.4); }
+  .sfl-form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  .sfl-form-success {
+    display: none;
+    background: rgba(51,180,74,0.1);
+    border: 1px solid rgba(51,180,74,0.3);
+    border-left: 4px solid var(--green);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px; color: var(--dark-blue);
+    font-size: 16px; line-height: 1.6; margin-bottom: 20px;
+  }
+  .sfl-form-error {
+    display: none;
+    background: rgba(220,38,38,0.08);
+    border: 1px solid rgba(220,38,38,0.2);
+    border-left: 4px solid #dc2626;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px; color: #dc2626;
+    font-size: 15px; margin-bottom: 16px;
+  }
+
+  /* INFO SIDE */
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-info-card {
+    background: #fff; border-radius: 16px; padding: 26px 24px;
+    box-shadow: 0 8px 24px rgba(11,27,51,0.07);
+    border-left: 4px solid var(--green);
+  }
+  .contact-info-card h3 {
+    font-size: 13px; font-weight: 800; color: var(--dark-blue);
+    margin: 0 0 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .contact-info-card p { font-size: 15px; color: var(--muted); margin: 0 0 8px; line-height: 1.6; }
+  .contact-info-card p:last-child { margin: 0; }
+  .contact-info-card a {
+    color: var(--green); font-weight: 700; font-size: 15px;
+    display: block; margin-bottom: 6px; transition: opacity 0.2s ease;
+  }
+  .contact-info-card a:last-of-type { margin-bottom: 0; }
+  .contact-info-card a:hover { opacity: 0.8; }
+  .contact-note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 8px !important; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+    .contact-hero { min-height: 300px; padding: 0 6% 40px; }
+  }
+  @media (max-width: 600px) {
+    .contact-main { padding: 48px 24px; }
+    .contact-hero { padding: 0 24px 36px; }
+    .contact-form-wrap { padding: 32px 20px; }
+    .sfl-form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">
+      <img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning">
+    </a>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <div class="services-dropdown">
+        <span>Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="services-menu">
+          <a href="/windows/">Windows</a>
+          <a href="/solar-panels/">Solar Panels</a>
+          <a href="/soft-washing/">Soft Washing</a>
+          <a href="/pressure-washing/">Pressure Washing</a>
+          <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        </div>
+      </div>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/" class="active">Contact</a>
+      <a href="/about-us/">About Us</a>
+    </nav>
+    <div class="header-right">
+      <a href="tel:9549986178" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call us (954) 998-6178
+      </a>
+      <span class="header-hours">Mon–Fri, 8am–6pm</span>
+    </div>
+    <button class="header-burger" aria-label="Open menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    <a href="tel:9549986178" class="header-phone-mobile">Call us (954) 998-6178</a>
+  </div>
+</header>
+
+<div class="contact-page">
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-inner">
+      <h1>Get Your Free On-Site Quote</h1>
+      <p>We come to you, take a look at your property, and give you a clear no-obligation estimate. No phone quotes — every job is different and deserves a proper look.</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <section class="contact-main">
+    <div class="contact-inner">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2>Request a Free Estimate</h2>
+        <p>Fill out the form below and we will be in touch to schedule your free on-site visit.</p>
+
+        <div class="sfl-form-success" id="sfl-success">
+          <strong>Thank you!</strong> Your message has been received. We will be in touch within one business day to schedule your free on-site estimate.
+        </div>
+        <div class="sfl-form-error" id="sfl-error">
+          Something went wrong. Please try again or call us directly at (954) 998-6178.
+        </div>
+
+        <form class="sfl-form" id="sfl-contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f040ae19-f8bb-4dab-a939-348e1a2d651e">
+          <input type="hidden" name="subject" value="New Quote Request — SFL Window Cleaning">
+          <input type="hidden" name="from_name" value="SFL Window Cleaning Website">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="sfl-form-row">
+            <div class="sfl-form-group">
+              <label for="first_name">First Name <span class="required">*</span></label>
+              <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="sfl-form-group">
+              <label for="last_name">Last Name <span class="required">*</span></label>
+              <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <div class="sfl-form-row">
+            <div class="sfl-form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="sfl-form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+          </div>
+
+          <div class="sfl-form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Company Name (optional)">
+          </div>
+
+          <div class="sfl-form-group">
+            <label for="service">Service Interested In <span class="required">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="Window Cleaning">Window Cleaning</option>
+              <option value="Solar Panel Cleaning">Solar Panel Cleaning</option>
+              <option value="Exterior Soft Washing">Exterior Soft Washing</option>
+              <option value="Pressure Washing">Pressure Washing</option>
+              <option value="Gutter Cleaning">Gutter Cleaning</option>
+              <option value="Multiple Services">Multiple Services</option>
+              <option value="Not Sure">Not Sure — I Need a Recommendation</option>
+            </select>
+          </div>
+
+          <div class="sfl-form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us about your property and what you need..." required></textarea>
+          </div>
+
+          <button type="submit" class="sfl-form-submit" id="sfl-submit">Send My Request</button>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <h3>Call or Email Us</h3>
+          <a href="tel:+19549986178">(954) 998-6178</a>
+          <a href="mailto:info@sflwindows.com">info@sflwindows.com</a>
+          <p class="contact-note">We typically respond to all inquiries within one business day.</p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Service Area</h3>
+          <p>We serve residential and commercial customers throughout:</p>
+          <p><strong>Broward County</strong> — Fort Lauderdale, Pompano Beach, Coral Springs, Weston, Davie, Hollywood, Deerfield Beach, and surrounding areas.</p>
+          <p><strong>Palm Beach County</strong> — Boca Raton, Delray Beach, Boynton Beach, West Palm Beach, and surrounding areas.</p>
+          <p><strong>Miami-Dade County</strong> — Miami, Coral Gables, Aventura, Doral, and surrounding areas.</p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>Why On-Site Quotes?</h3>
+          <p>Every property is different. The number of windows, the height of the building, the type of surfaces, the accessibility, and the condition of what needs to be cleaned all affect the price.</p>
+          <p>An on-site visit lets us give you an accurate quote — not a guess.</p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>What to Expect</h3>
+          <p>After you submit the form we will contact you to schedule a convenient time for a free on-site visit. The visit typically takes 15 to 30 minutes. We will walk the property, answer your questions, and provide a clear written estimate before we leave.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-topbar"></div>
+  <div class="footer-main">
+    <div class="footer-top-row">
+      <nav class="footer-nav-grid">
+        <a href="/">Home</a>
+        <a href="/soft-washing/">Soft Washing</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/windows/">Windows</a>
+        <a href="/pressure-washing/">Pressure Washing</a>
+        <a href="/contact/">Contact</a>
+        <a href="/solar-panels/">Solar Panels</a>
+        <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        <a href="/about-us/">About Us</a>
+      </nav>
+      <div class="footer-center">
+        <a href="/" class="footer-logo"><img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning"></a>
+        <div class="footer-center-contact">
+          <a href="tel:9549986178">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call us (954) 998-6178
+          </a>
+          <a href="mailto:info@sflwindows.com">
+            <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+            info@sflwindows.com
+          </a>
+          <span>Mon–Fri, 8am–6pm</span>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/sflwindowcleaning" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
+          <a href="https://www.instagram.com/sflwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
+          <a href="https://www.linkedin.com/in/sflwindows/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. All Rights Reserved.</div>
+</footer>
+
+<script>
+document.getElementById('sfl-contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const submitBtn = document.getElementById('sfl-submit');
+  const successMsg = document.getElementById('sfl-success');
+  const errorMsg = document.getElementById('sfl-error');
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      successMsg.style.display = 'block';
+      form.reset();
+      form.style.display = 'none';
+    } else {
+      errorMsg.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send My Request';
+    }
+  } catch (error) {
+    errorMsg.style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send My Request';
+  }
+});
+</script>
+
+</body>
+</html>
