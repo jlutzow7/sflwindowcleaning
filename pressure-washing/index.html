@@ -550,6 +550,23 @@
   </div>
   <div class="footer-copyright">© 2026 South Florida Window Cleaning. All Rights Reserved.</div>
 </footer>
-
+<script>
+  const burger = document.querySelector('.header-burger');
+  const nav = document.querySelector('.header-nav');
+  burger.addEventListener('click', function() {
+    const isOpen = nav.style.display === 'flex';
+    nav.style.display = isOpen ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '70px';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.background = '#eef4fa';
+    nav.style.padding = '16px 4%';
+    nav.style.zIndex = '999';
+    nav.style.gap = '20px';
+    nav.style.borderBottom = '1px solid rgba(11,27,51,0.08)';
+  });
+</script>
 </body>
 </html>
