@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp">
 
 <!-- Preload LCP hero image -->
-<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job.webp" fetchpriority="high">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job.webp" fetchpriority="high" media="(min-width: 769px)">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -63,9 +64,9 @@
 
 <style>
   :root {
-    --green: #33b44a;
+    --green: #278838;
     --green-dark: #217a32;
-    --blue: #1479c9;
+    --blue: #1373be;
     --orange: #f26d21;
     --orange-dark: #c4501a;
     --teal: #20b7d2;
@@ -101,7 +102,7 @@
     gap: 20px;
   }
 
-  .header-logo img { height: 56px; }
+  .header-logo img { height: 56px; width: auto; }
 
   .header-nav {
     display: flex;
@@ -185,6 +186,21 @@
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+
+  .header-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #eef4fa;
+    padding: 16px 4%;
+    z-index: 999;
+    gap: 20px;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+
   .header-phone-mobile { display: none; }
 
   @media (max-width: 900px) {
@@ -247,7 +263,7 @@
     gap: 8px;
   }
 
-  .footer-logo img { height: 56px; }
+  .footer-logo img { height: 56px; width: auto; }
 
   .footer-center-contact {
     display: flex;
@@ -285,7 +301,7 @@
   .footer-social a:hover { color: var(--blue); }
 
   .footer-copyright {
-    background: #6b7d96;
+    background: #677890;
     color: #fff;
     text-align: center;
     padding: 12px;
@@ -316,13 +332,26 @@
         rgba(11,27,51,0.55) 78%,
         rgba(11,27,51,0.75) 100%
       ),
-      url("https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job.webp");
+      url("https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job-mobile.webp");
     background-color: #a0c4d8;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
     padding: 0 6% 60px;
+  }
+
+  @media (min-width: 769px) {
+    .sfl-sp-hero {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(11,27,51,0.0) 0%,
+          rgba(11,27,51,0.15) 45%,
+          rgba(11,27,51,0.55) 78%,
+          rgba(11,27,51,0.75) 100%
+        ),
+        url("https://sflwindowcleaning.com/images/commercial-solar-panel-cleaning-job.webp");
+    }
   }
 
   .sfl-sp-hero-inner { max-width: 680px; }
@@ -535,7 +564,7 @@
     <div class="sfl-sp-inner sfl-sp-clearfix">
       <div class="sfl-sp-eyebrow"><span aria-hidden="true"></span>Solar Panel Cleaning</div>
       <h2>Dirty Panels Are Costing You Money Every Day</h2>
-      <img class="sfl-sp-photo-right" src="https://sflwindowcleaning.com/images/solar-panel-cleaning-before-after.webp" alt="Solar panel cleaning before and after results South Florida" width="810" height="540">
+      <img class="sfl-sp-photo-right" src="https://sflwindowcleaning.com/images/solar-panel-cleaning-before-after.webp" alt="Solar panel cleaning before and after results South Florida" width="600" height="338">
       <p>Solar panels are a significant investment, and most homeowners and businesses install them expecting years of reliable energy production. But the performance of a solar array depends almost entirely on how much sunlight reaches the photovoltaic cells — and anything sitting on the surface of the glass blocks that sunlight.</p>
       <p>In South Florida, panels face a particularly challenging environment. Salt air from the Atlantic and Gulf coasts leaves a fine mineral film on panel surfaces that builds up over time. Pollen season deposits thick layers of fine dust across entire arrays. Summer storm runoff leaves behind hard water minerals and sediment. Bird droppings create concentrated spots that block sunlight and can etch into panel glass if left for extended periods. And the intense subtropical sun bakes all of it onto the surface, making it harder to remove the longer it sits.</p>
       <p>Rain alone is not enough. While rain can rinse loose dust from panels, it also carries minerals and deposits from the atmosphere that dry on the glass and leave residue behind. Panels that rely on rain cleaning typically underperform compared to professionally maintained arrays.</p>
@@ -554,7 +583,7 @@
     <div class="sfl-sp-inner sfl-sp-clearfix">
       <div class="sfl-sp-eyebrow"><span aria-hidden="true"></span>Our Method</div>
       <h2>Pure Water Cleaning — Safe, Effective, and Residue-Free</h2>
-      <img class="sfl-sp-photo-left" src="https://sflwindowcleaning.com/images/residential-solar-panel-cleaning.webp" alt="Residential solar panel cleaning rooftop array South Florida" width="800" height="360">
+      <img class="sfl-sp-photo-left" src="https://sflwindowcleaning.com/images/residential-solar-panel-cleaning.webp" alt="Residential solar panel cleaning rooftop array South Florida" width="600" height="338">
       <p>We use a pure water cleaning system for all solar panel cleaning. Ordinary tap water is run through a multi-stage filtration process that removes minerals, dissolved solids, and impurities before it ever contacts your panels. The purified water then actively draws contaminants off the panel surface and evaporates completely clean — leaving no soap film, no mineral deposits, and no residue of any kind.</p>
       <p>We use soft, non-abrasive brushes specifically designed for solar panel surfaces. No harsh chemicals. No pressure washing. No abrasive pads or tools that could scratch or damage the glass coating on your panels.</p>
       <h3>Pre-Cleaning Inspection</h3>
@@ -692,18 +721,8 @@
   const burger = document.querySelector('.header-burger');
   const nav = document.querySelector('.header-nav');
   burger.addEventListener('click', function() {
-    const isOpen = nav.style.display === 'flex';
-    nav.style.display = isOpen ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.position = 'absolute';
-    nav.style.top = '70px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.background = '#eef4fa';
-    nav.style.padding = '16px 4%';
-    nav.style.zIndex = '999';
-    nav.style.gap = '20px';
-    nav.style.borderBottom = '1px solid rgba(11,27,51,0.08)';
+    const isOpen = nav.classList.contains('mobile-open');
+    nav.classList.toggle('mobile-open', !isOpen);
     burger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   });
 </script>
