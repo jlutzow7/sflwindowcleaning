@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp">
 
 <!-- Preload hero -->
-<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/complete-exterior-cleaning.webp" fetchpriority="high">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/complete-exterior-cleaning-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/complete-exterior-cleaning.webp" fetchpriority="high" media="(min-width: 769px)">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -63,9 +64,9 @@
 
 <style>
   :root {
-    --green: #33b44a;
+    --green: #278838;
     --green-dark: #217a32;
-    --blue: #1479c9;
+    --blue: #1373be;
     --orange: #f26d21;
     --orange-dark: #c4501a;
     --teal: #20b7d2;
@@ -102,7 +103,7 @@
     gap: 20px;
   }
 
-  .header-logo img { height: 56px; }
+  .header-logo img { height: 90px; width: auto; }
 
   .header-nav {
     display: flex;
@@ -185,6 +186,21 @@
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+
+  .header-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #eef4fa;
+    padding: 16px 4%;
+    z-index: 999;
+    gap: 20px;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+
   .header-phone-mobile { display: none; }
 
   @media (max-width: 900px) {
@@ -248,7 +264,7 @@
     gap: 8px;
   }
 
-  .footer-logo img { height: 56px; }
+  .footer-logo img { height: 90px; width: auto; }
 
   .footer-center-contact {
     display: flex;
@@ -286,7 +302,7 @@
   .footer-social a:hover { color: var(--blue); }
 
   .footer-copyright {
-    background: #6b7d96;
+    background: #677890;
     color: #fff;
     text-align: center;
     padding: 12px;
@@ -315,13 +331,26 @@
         rgba(11,27,51,0.25) 75%,
         rgba(11,27,51,0.55) 100%
       ),
-      url("https://sflwindowcleaning.com/images/complete-exterior-cleaning.webp");
+      url("https://sflwindowcleaning.com/images/complete-exterior-cleaning-mobile.webp");
     background-color: #a0c4d8;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
     padding: 0 6% 60px;
+  }
+
+  @media (min-width: 769px) {
+    .sfl-sw-hero {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(11,27,51,0.0) 0%,
+          rgba(11,27,51,0.0) 50%,
+          rgba(11,27,51,0.25) 75%,
+          rgba(11,27,51,0.55) 100%
+        ),
+        url("https://sflwindowcleaning.com/images/complete-exterior-cleaning.webp");
+    }
   }
 
   .sfl-sw-hero-inner { max-width: 680px; }
@@ -547,7 +576,7 @@
       <img class="sfl-sw-photo-right"
            src="https://sflwindowcleaning.com/images/exterior-home-cleaning.webp"
            alt="Soft washing exterior of South Florida home"
-           width="1169" height="540">
+           width="600" height="337">
       <p>South Florida's climate is hard on home exteriors. The combination of heat, humidity, salt air, and frequent rain creates ideal conditions for mold, mildew, and algae to grow on stucco walls, painted surfaces, soffits, and roof lines. What starts as a faint gray or green tint can spread quickly across an entire exterior if left untreated.</p>
       <p>Many homeowners assume pressure washing is the answer — but pressure washing the wrong surfaces can cause serious damage. High pressure can crack or pit stucco, blast paint off walls, force water behind siding, damage caulking around windows and doors, and strip the protective coatings from painted surfaces. Once that damage is done it is expensive to repair.</p>
       <p>Soft washing is a different approach entirely. Instead of using high pressure to blast away buildup, soft washing uses low-pressure water — similar to a garden hose — combined with environmentally safe cleaning solutions that break down and kill mold, mildew, algae, and organic growth at the source. The result is a thorough, lasting clean that is safe for your home's exterior surfaces.</p>
@@ -569,7 +598,7 @@
       <img class="sfl-sw-photo-left"
            src="https://sflwindowcleaning.com/images/soft-wash-broward-county.webp"
            alt="Soft washing process South Florida"
-           width="1169" height="540">
+           width="600" height="338">
       <p>We use environmentally safe, biodegradable cleaning solutions that are effective against mold, mildew, algae, and organic staining without harming your landscaping, plants, or surrounding surfaces. Our solutions are applied at low pressure and allowed to dwell on the surface, breaking down organic growth at the root rather than just rinsing it away.</p>
       <p>This is an important distinction. Pressure washing removes what you can see on the surface, but it does not kill the underlying mold or algae spores. Those spores remain on the surface and regrow quickly. Soft washing with the right cleaning solution kills the growth at the source, which is why soft washed surfaces stay cleaner significantly longer than pressure washed ones.</p>
       <h3>Surfaces We Soft Wash</h3>
@@ -684,18 +713,8 @@
   const burger = document.querySelector('.header-burger');
   const nav = document.querySelector('.header-nav');
   burger.addEventListener('click', function() {
-    const isOpen = nav.style.display === 'flex';
-    nav.style.display = isOpen ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.position = 'absolute';
-    nav.style.top = '70px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.background = '#eef4fa';
-    nav.style.padding = '16px 4%';
-    nav.style.zIndex = '999';
-    nav.style.gap = '20px';
-    nav.style.borderBottom = '1px solid rgba(11,27,51,0.08)';
+    const isOpen = nav.classList.contains('mobile-open');
+    nav.classList.toggle('mobile-open', !isOpen);
     burger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   });
 </script>
