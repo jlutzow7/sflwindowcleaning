@@ -6,29 +6,28 @@
 <title>South Florida Window Cleaning | Broward, Palm Beach & Miami-Dade</title>
 <meta name="description" content="Professional window cleaning, solar panel cleaning, soft washing, pressure washing, and gutter cleaning serving Broward, Palm Beach, and Miami-Dade Counties.">
 <link rel="canonical" href="https://sflwindowcleaning.com/">
-<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp">
+<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/cdn-cgi/image/width=64,quality=85,format=auto/images/south-florida-window-cleaning.png">
 
-<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
-<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale.webp" fetchpriority="high" media="(min-width: 769px)">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" fetchpriority="high">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="South Florida Window Cleaning | Broward, Palm Beach & Miami-Dade">
 <meta property="og:description" content="Professional window cleaning, solar panel cleaning, soft washing, pressure washing, and gutter cleaning serving Broward, Palm Beach, and Miami-Dade Counties.">
 <meta property="og:url" content="https://sflwindowcleaning.com/">
-<meta property="og:image" content="https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale.webp">
+<meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp">
 <meta property="og:site_name" content="South Florida Window Cleaning">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="South Florida Window Cleaning | Broward, Palm Beach & Miami-Dade">
 <meta name="twitter:description" content="Professional window cleaning, solar panel cleaning, soft washing, pressure washing, and gutter cleaning serving Broward, Palm Beach, and Miami-Dade Counties.">
-<meta name="twitter:image" content="https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale.webp">
+<meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
-  "image": "https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale.webp",
+  "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp",
   "url": "https://sflwindowcleaning.com/",
   "telephone": "+19549986178",
   "email": "info@sflwindows.com",
@@ -328,26 +327,56 @@
   .sfl-hero {
     position: relative;
     min-height: 600px;
-    background-image:
-      linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%),
-      url("https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale-mobile.webp");
-    background-color: #a0c4d8;
-    background-size: cover;
-    background-position: center;
     padding: 80px 2%;
     display: flex;
     align-items: flex-end;
+    overflow: hidden;
+    background-color: #a0c4d8;
   }
 
-  @media (min-width: 769px) {
-    .sfl-hero {
-      background-image:
-        linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%),
-        url("https://sflwindowcleaning.com/images/window-cleaning-fort-lauderdale.webp");
-    }
+  .sfl-hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
   }
 
-  .sfl-hero-inner { max-width: 680px; }
+  .sfl-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-color: #a0c4d8;
+  }
+
+  .sfl-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0) 100%);
+  }
+
+  .sfl-hero-pause {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 3;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+  }
+
+  .sfl-hero-pause:hover { background: rgba(0,0,0,0.7); }
+  .sfl-hero-pause svg { width: 18px; height: 18px; fill: #fff; }
+
+  .sfl-hero-inner { position: relative; z-index: 2; max-width: 680px; }
 
   .sfl-hero h1 {
     color: #fff;
@@ -593,8 +622,7 @@
   }
 
   @media (max-width: 768px) {
-    .sfl-hero { min-height: 520px; padding: 60px 24px; background-position: center right; }
-    .sfl-trust-grid { grid-template-columns: 1fr; }
+    .sfl-hero { min-height: 520px; padding: 60px 24px; }
   }
 
   @media (max-width: 600px) {
@@ -608,7 +636,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="header-logo">
-      <img src="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp" alt="South Florida Window Cleaning" width="400">
+      <img src="https://sflwindowcleaning.com/cdn-cgi/image/width=420,quality=85,format=auto/images/south-florida-window-cleaning.png" alt="South Florida Window Cleaning" width="400">
     </a>
     <nav class="header-nav" aria-label="Main navigation">
       <a href="/" class="active">Home</a>
@@ -646,6 +674,13 @@
 <div class="sfl-homepage">
 
   <section class="sfl-hero" aria-label="Hero">
+    <div class="sfl-hero-media">
+      <video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <button id="heroPauseBtn" class="sfl-hero-pause" type="button" aria-label="Pause background video" aria-pressed="false">
+        <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+        <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+      </button>
+    </div>
     <div class="sfl-hero-inner">
       <h1>Crystal Clear Results. Every Time.</h1>
       <p>Professional window cleaning and exterior cleaning services for homes and businesses throughout Broward, Palm Beach, and Miami-Dade Counties.</p>
@@ -756,7 +791,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/images/window-cleaning-south-florida.webp" alt="Professional window cleaning South Florida" width="800" height="450">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/window-cleaning-fort-lauderdale.jpg" alt="Professional window cleaning Fort Lauderdale" width="800" height="450">
         <div class="sfl-stat-row" aria-label="Window cleaning stats">
           <div class="sfl-stat"><div class="sfl-stat-num">20+</div><div class="sfl-stat-label">Years serving South Florida</div></div>
           <div class="sfl-stat"><div class="sfl-stat-num">10k+</div><div class="sfl-stat-label">Windows Cleaned</div></div>
@@ -786,7 +821,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/images/roof-top-solar-panel-cleaning-residential.webp" alt="Solar panel cleaning South Florida" width="800" height="360">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/solar-panel-cleaning-commercial.jpg" alt="Solar panel cleaning South Florida" width="800" height="360">
         <div class="sfl-stat-row" aria-label="Solar panel cleaning stats">
           <div class="sfl-stat"><div class="sfl-stat-num">25%</div><div class="sfl-stat-label">Avg output lost when dirty</div></div>
           <div class="sfl-stat"><div class="sfl-stat-num">Pure</div><div class="sfl-stat-label">Water — zero residue</div></div>
@@ -816,7 +851,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/images/soft-wash-sw-ranches.webp" alt="Soft washing stucco home South Florida" width="800" height="600">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/soft-wash-sw-ranches.jpg" alt="Soft washing stucco home South Florida" width="800" height="600">
       </div>
     </div>
   </section>
@@ -841,7 +876,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/images/roof-cleaning-cooper-city.webp" alt="Pressure washing driveway South Florida" width="800" height="450">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/roof-cleaning-cooper-city.jpg" alt="Pressure washing roof South Florida" width="800" height="450">
       </div>
     </div>
   </section>
@@ -866,7 +901,7 @@
         </a>
       </div>
       <div class="sfl-svc-visual">
-        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/images/gutter-cleaning-after.webp" alt="Gutter cleaning South Florida" width="800" height="371">
+        <img class="sfl-svc-photo sfl-svc-photo-tall" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/gutter-cleaning-after.jpg" alt="Gutter cleaning South Florida" width="800" height="371">
       </div>
     </div>
   </section>
@@ -962,7 +997,7 @@
       </nav>
       <div class="footer-center">
         <a href="/" class="footer-logo">
-          <img src="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp" alt="South Florida Window Cleaning" width="400">
+          <img src="https://sflwindowcleaning.com/cdn-cgi/image/width=420,quality=85,format=auto/images/south-florida-window-cleaning.png" alt="South Florida Window Cleaning" width="400">
         </a>
         <div class="footer-center-contact">
           <a href="tel:9549986178">
@@ -997,6 +1032,43 @@
     nav.classList.toggle('mobile-open', !isOpen);
     burger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   });
+
+  window.addEventListener('load', function() {
+    const heroVideo = document.getElementById('heroVideo');
+    if (!heroVideo) return;
+    const webmSource = document.createElement('source');
+    webmSource.src = 'https://sflwindowcleaning.com/images/hero-window-cleaning-12s.webm';
+    webmSource.type = 'video/webm';
+    const mp4Source = document.createElement('source');
+    mp4Source.src = 'https://sflwindowcleaning.com/images/hero-window-cleaning-12s.mp4';
+    mp4Source.type = 'video/mp4';
+    heroVideo.appendChild(webmSource);
+    heroVideo.appendChild(mp4Source);
+    heroVideo.load();
+    heroVideo.play().catch(function() {});
+  });
+
+  const pauseBtn = document.getElementById('heroPauseBtn');
+  const heroVideo = document.getElementById('heroVideo');
+  if (pauseBtn && heroVideo) {
+    const iconPause = pauseBtn.querySelector('.icon-pause');
+    const iconPlay = pauseBtn.querySelector('.icon-play');
+    pauseBtn.addEventListener('click', function() {
+      if (heroVideo.paused) {
+        heroVideo.play();
+        pauseBtn.setAttribute('aria-pressed', 'false');
+        pauseBtn.setAttribute('aria-label', 'Pause background video');
+        iconPause.style.display = 'block';
+        iconPlay.style.display = 'none';
+      } else {
+        heroVideo.pause();
+        pauseBtn.setAttribute('aria-pressed', 'true');
+        pauseBtn.setAttribute('aria-label', 'Play background video');
+        iconPause.style.display = 'none';
+        iconPlay.style.display = 'block';
+      }
+    });
+  }
 </script>
 </body>
 </html>
