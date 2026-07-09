@@ -6,21 +6,25 @@
 <title>About Us | South Florida Window Cleaning | Broward, Palm Beach & Miami-Dade</title>
 <meta name="description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades. Professional window cleaning, solar panels, soft washing, pressure washing, and gutter cleaning.">
 <link rel="canonical" href="https://sflwindowcleaning.com/about-us/">
-<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/lgo.webp">
+<link rel="icon" type="image/png" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp">
+
+<!-- Preload hero -->
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning-van-mobile.webp" fetchpriority="high" media="(max-width: 768px)">
+<link rel="preload" as="image" href="https://sflwindowcleaning.com/images/south-florida-window-cleaning-van.webp" fetchpriority="high" media="(min-width: 769px)">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Us | South Florida Window Cleaning">
 <meta property="og:description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
 <meta property="og:url" content="https://sflwindowcleaning.com/about-us/">
-<meta property="og:image" content="https://sflwindowcleaning.com/images/abuh.webp">
+<meta property="og:image" content="https://sflwindowcleaning.com/images/south-florida-window-cleaning-van.webp">
 <meta property="og:site_name" content="South Florida Window Cleaning">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Us | South Florida Window Cleaning">
 <meta name="twitter:description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
-<meta name="twitter:image" content="https://sflwindowcleaning.com/images/abuh.webp">
+<meta name="twitter:image" content="https://sflwindowcleaning.com/images/south-florida-window-cleaning-van.webp">
 
 <!-- LocalBusiness Schema -->
 <script type="application/ld+json">
@@ -28,8 +32,8 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
-  "image": "https://sflwindowcleaning.com/images/lgo.webp",
-  "url": "https://sflwindowcleaning.com/",
+  "image": "https://sflwindowcleaning.com/images/south-florida-window-cleaning-van.webp",
+  "url": "https://sflwindowcleaning.com/about-us/",
   "telephone": "+19549986178",
   "email": "info@sflwindows.com",
   "address": {
@@ -54,10 +58,13 @@
 
 <style>
   :root {
-    --green: #33b44a;
-    --blue: #1479c9;
+    --green: #278838;
+    --green-dark: #217a32;
+    --blue: #1373be;
     --orange: #f26d21;
+    --orange-dark: #c4501a;
     --teal: #20b7d2;
+    --teal-dark: #157a8e;
     --purple: #7c3aed;
     --dark-blue: #0b1b33;
     --text-main: #1a2639;
@@ -82,17 +89,18 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 12px 4%; gap: 20px;
   }
-  .header-logo img { height: 56px; }
+  .header-logo img { height: 90px; width: auto; }
   .header-nav {
     display: flex; align-items: center; justify-content: center;
     flex: 1; gap: 46px;
   }
-  .header-nav a { font-weight: 700; font-size: 16px; color: var(--blue); position: relative; }
+  .header-nav a { font-weight: 700; font-size: 16px; color: var(--blue); position: relative; padding: 8px 4px; min-height: 44px; display: inline-flex; align-items: center; }
   .header-nav a.active { color: var(--dark-blue); border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
   .services-dropdown { position: relative; }
   .services-dropdown > span {
     font-weight: 700; font-size: 16px; color: var(--blue);
     cursor: pointer; display: flex; align-items: center; gap: 4px;
+    padding: 8px 4px; min-height: 44px;
   }
   .services-menu {
     display: none; position: absolute; top: 100%; left: 0;
@@ -101,23 +109,38 @@
     padding: 8px 0; min-width: 200px; z-index: 10;
   }
   .services-dropdown:hover .services-menu { display: block; }
-  .services-menu a { display: block; padding: 10px 20px; font-size: 14px; color: var(--text-main); font-weight: 600; }
+  .services-menu a { display: flex; align-items: center; padding: 12px 20px; font-size: 14px; color: var(--text-main); font-weight: 600; min-height: 44px; }
   .services-menu a:hover { background: var(--soft-bg); color: var(--blue); }
   .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-  .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); }
+  .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
-  .header-burger { display: none; background: none; border: none; cursor: pointer; }
+  .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+
+  .header-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #eef4fa;
+    padding: 16px 4%;
+    z-index: 999;
+    gap: 20px;
+    border-bottom: 1px solid rgba(11,27,51,0.08);
+  }
+
   .header-phone-mobile { display: none; }
 
   @media (max-width: 900px) {
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
-    .header-burger { display: block; }
+    .header-burger { display: flex; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
-      padding: 8px 0 4px; border-top: 1px solid rgba(11,27,51,0.08);
-      font-weight: 800; color: var(--blue);
+      padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
+      font-weight: 800; color: var(--blue); min-height: 44px;
     }
   }
 
@@ -133,21 +156,21 @@
     display: grid; grid-template-columns: repeat(3, auto);
     column-gap: 18px; row-gap: 10px; align-content: start;
   }
-  .footer-nav-grid a { font-size: 13px; color: var(--blue); font-weight: 700; white-space: nowrap; }
+  .footer-nav-grid a { font-size: 13px; color: var(--blue); font-weight: 700; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
   .footer-nav-grid a:hover { text-decoration: underline; }
   .footer-center { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-  .footer-logo img { height: 56px; }
+  .footer-logo img { height: 90px; width: auto; }
   .footer-center-contact { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
-  .footer-center-contact a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; justify-content: center; }
+  .footer-center-contact a { color: var(--muted); display: inline-flex; align-items: center; gap: 6px; justify-content: center; min-height: 44px; padding: 4px 0; }
   .footer-center-contact a:hover { color: var(--blue); }
   .footer-center-contact svg { width: 13px; height: 13px; flex-shrink: 0; fill: var(--blue); }
   .footer-right { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 14px; }
   .footer-service-text { font-size: 14px; color: var(--muted); line-height: 1.5; }
   .footer-social { display: flex; gap: 14px; }
-  .footer-social a { color: var(--muted); }
+  .footer-social a { color: var(--muted); min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
   .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
   .footer-social a:hover { color: var(--blue); }
-  .footer-copyright { background: #6b7d96; color: #fff; text-align: center; padding: 12px; font-size: 12px; margin-top: 16px; }
+  .footer-copyright { background: #677890; color: #fff; text-align: center; padding: 12px; font-size: 12px; margin-top: 16px; }
 
   @media (max-width: 700px) {
     .footer-top-row { grid-template-columns: 1fr; text-align: center; }
@@ -171,12 +194,25 @@
         rgba(11,27,51,0.25) 75%,
         rgba(11,27,51,0.45) 100%
       ),
-      url('https://sflwindowcleaning.com/images/abuh.webp');
+      url('https://sflwindowcleaning.com/images/south-florida-window-cleaning-van-mobile.webp');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
     padding: 0 6% 60px;
+  }
+
+  @media (min-width: 769px) {
+    .about-hero {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(11,27,51,0.0) 0%,
+          rgba(11,27,51,0.0) 50%,
+          rgba(11,27,51,0.25) 75%,
+          rgba(11,27,51,0.45) 100%
+        ),
+        url('https://sflwindowcleaning.com/images/south-florida-window-cleaning-van.webp');
+    }
   }
   .about-hero-inner { max-width: 680px; }
   .about-hero-inner p {
@@ -210,7 +246,7 @@
 
   .about-photo-right {
     float: right;
-    width: 52%; height: 500px;
+    width: 52%; aspect-ratio: 600 / 338;
     margin: 0 0 30px 40px;
     border-radius: 18px;
     object-fit: cover;
@@ -287,6 +323,7 @@
     font-weight: 800; font-size: 16px; margin-top: 8px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: transform 0.2s ease;
+    min-height: 44px;
   }
   .about-area-btn:hover { transform: translateY(-2px); }
   .about-area-list {
@@ -327,17 +364,17 @@
     font-weight: 900; font-size: 19px;
     box-shadow: 0 8px 28px rgba(51,180,74,0.4);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-bottom: 28px;
+    margin-bottom: 28px; min-height: 44px;
   }
   .about-bottom-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(51,180,74,0.5); }
   .about-contacts { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-  .about-contacts a { color: rgba(255,255,255,0.75); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; transition: color 0.2s ease; }
+  .about-contacts a { color: rgba(255,255,255,0.75); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; transition: color 0.2s ease; min-height: 44px; }
   .about-contacts a:hover { color: var(--green); }
   .about-contacts svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    .about-photo-right { float: none; width: 100%; margin: 0 0 24px 0; height: 300px; }
+    .about-photo-right { float: none; width: 100%; margin: 0 0 24px 0; }
     .about-values-grid { grid-template-columns: 1fr 1fr; }
     .about-area-inner { grid-template-columns: 1fr; gap: 36px; }
     .about-hero { min-height: 460px; }
@@ -355,20 +392,20 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="header-logo">
-      <img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning">
+      <img src="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp" alt="South Florida Window Cleaning" width="400">
     </a>
-    <nav class="header-nav">
+    <nav class="header-nav" aria-label="Main navigation">
       <a href="/">Home</a>
       <div class="services-dropdown">
-        <span>Services
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <span role="button" tabindex="0" aria-haspopup="true">Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </span>
-        <div class="services-menu">
-          <a href="/windows/">Windows</a>
-          <a href="/solar-panels/">Solar Panels</a>
-          <a href="/soft-washing/">Soft Washing</a>
-          <a href="/pressure-washing/">Pressure Washing</a>
-          <a href="/gutter-cleaning/">Gutter Cleaning</a>
+        <div class="services-menu" role="menu">
+          <a href="/windows/" role="menuitem">Windows</a>
+          <a href="/solar-panels/" role="menuitem">Solar Panels</a>
+          <a href="/soft-washing/" role="menuitem">Soft Washing</a>
+          <a href="/pressure-washing/" role="menuitem">Pressure Washing</a>
+          <a href="/gutter-cleaning/" role="menuitem">Gutter Cleaning</a>
         </div>
       </div>
       <a href="/gallery/">Gallery</a>
@@ -377,18 +414,19 @@
     </nav>
     <div class="header-right">
       <a href="tel:9549986178" class="header-phone">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         Call us (954) 998-6178
       </a>
       <span class="header-hours">Mon–Fri, 8am–6pm</span>
     </div>
-    <button class="header-burger" aria-label="Open menu">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    <button class="header-burger" aria-label="Open menu" aria-expanded="false">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
     <a href="tel:9549986178" class="header-phone-mobile">Call us (954) 998-6178</a>
   </div>
 </header>
 
+<main>
 <div class="about-page">
 
   <!-- HERO -->
@@ -403,7 +441,7 @@
     <div class="about-inner about-clearfix">
       <div class="about-eyebrow"><span></span>About Us</div>
       <h2>South Florida Window Cleaning</h2>
-      <img class="about-photo-right" src="https://sflwindowcleaning.com/images/abu1.webp" alt="South Florida Window Cleaning service van">
+      <img class="about-photo-right" src="https://sflwindowcleaning.com/images/glass-cleaning-pembroke-pines.webp" alt="Glass cleaning commercial building Pembroke Pines" width="600" height="338">
 
       <p>South Florida Window Cleaning has been providing professional exterior cleaning services to residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties for nearly two decades. What started as a commitment to quality workmanship and dependable service has grown into a trusted name in exterior cleaning across South Florida.</p>
 
@@ -433,7 +471,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
           </div>
           <h3>Quality Workmanship</h3>
           <p>We do not cut corners. Every job gets our full attention and effort — the same standard whether it is a small residential visit or a large commercial property.</p>
@@ -441,7 +479,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <h3>Punctual &amp; Reliable</h3>
           <p>We show up when we say we will. We do what we say we are going to do. Dependability is not a bonus — it is the baseline.</p>
@@ -449,7 +487,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <h3>Personal Service</h3>
           <p>As an owner-operated business, every customer gets direct access to the person doing the work. No middlemen, no call centers, no runaround.</p>
@@ -457,7 +495,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6 8 4 12 4 15a8 8 0 0 0 16 0c0-3-2-7-8-13z"></path></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6 8 4 12 4 15a8 8 0 0 0 16 0c0-3-2-7-8-13z"></path></svg>
           </div>
           <h3>Eco-Friendly Methods</h3>
           <p>Our pure water system uses zero chemicals. Our soft washing solutions are biodegradable and safe for landscaping, pets, and the environment.</p>
@@ -465,7 +503,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
           </div>
           <h3>Streak-Free Results</h3>
           <p>Our pure water cleaning system guarantees a flawless, spot-free finish on every window and solar panel we clean. Zero streaks — every time.</p>
@@ -473,7 +511,7 @@
 
         <div class="about-value-card">
           <div class="about-value-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
           <h3>Satisfaction Guaranteed</h3>
           <p>We stand behind every job. If you are not happy with the results, we come back and make it right — no questions asked.</p>
@@ -521,11 +559,11 @@
       <a class="about-bottom-btn" href="/contact/">Schedule a Free On-Site Quote</a>
       <div class="about-contacts">
         <a href="tel:+19549986178">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
           Call (954) 998-6178
         </a>
         <a href="mailto:info@sflwindows.com">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
           info@sflwindows.com
         </a>
       </div>
@@ -533,12 +571,13 @@
   </section>
 
 </div>
+</main>
 
 <footer class="site-footer">
   <div class="footer-topbar"></div>
   <div class="footer-main">
     <div class="footer-top-row">
-      <nav class="footer-nav-grid">
+      <nav class="footer-nav-grid" aria-label="Footer navigation">
   <a href="/">Home</a>
   <a href="/windows/">Windows</a>
   <a href="/solar-panels/">Solar Panels</a>
@@ -550,14 +589,14 @@
   <a href="/about-us/">About Us</a>
 </nav>
       <div class="footer-center">
-        <a href="/" class="footer-logo"><img src="https://sflwindowcleaning.com/images/lgo.webp" alt="South Florida Window Cleaning"></a>
+        <a href="/" class="footer-logo"><img src="https://sflwindowcleaning.com/images/south-florida-window-cleaning.webp" alt="South Florida Window Cleaning" width="400"></a>
         <div class="footer-center-contact">
           <a href="tel:9549986178">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Call us (954) 998-6178
           </a>
           <a href="mailto:info@sflwindows.com">
-            <svg viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
             info@sflwindows.com
           </a>
           <span>Mon–Fri, 8am–6pm</span>
@@ -566,9 +605,9 @@
       <div class="footer-right">
         <p class="footer-service-text">Proudly serving Broward, Palm Beach, and Miami-Dade Counties.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/sflwindowcleaning" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
-          <a href="https://www.instagram.com/sflwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
-          <a href="https://www.linkedin.com/in/sflwindows/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
+          <a href="https://www.facebook.com/sflwindowcleaning" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg></a>
+          <a href="https://www.instagram.com/sflwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2"></circle></svg></a>
+          <a href="https://www.linkedin.com/in/sflwindows/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 10v7" stroke="#fff" stroke-width="1.6" fill="none"></path></svg></a>
         </div>
       </div>
     </div>
@@ -579,18 +618,9 @@
   const burger = document.querySelector('.header-burger');
   const nav = document.querySelector('.header-nav');
   burger.addEventListener('click', function() {
-    const isOpen = nav.style.display === 'flex';
-    nav.style.display = isOpen ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.position = 'absolute';
-    nav.style.top = '70px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.background = '#eef4fa';
-    nav.style.padding = '16px 4%';
-    nav.style.zIndex = '999';
-    nav.style.gap = '20px';
-    nav.style.borderBottom = '1px solid rgba(11,27,51,0.08)';
+    const isOpen = nav.classList.contains('mobile-open');
+    nav.classList.toggle('mobile-open', !isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   });
 </script>
 </body>
