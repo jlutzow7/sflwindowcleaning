@@ -676,7 +676,10 @@
 
   <section class="sfl-hero" aria-label="Hero">
     <div class="sfl-hero-media">
-      <video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <script>
+  document.write('<video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/' + (window.innerWidth <= 768 ? 'width=800' : 'width=1920') + ',quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>');
+</script>
+<noscript><video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video></noscript>
       <button id="heroPauseBtn" class="sfl-hero-pause" type="button" aria-label="Pause background video" aria-pressed="false">
         <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
         <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
