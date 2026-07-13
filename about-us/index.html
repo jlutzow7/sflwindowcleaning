@@ -201,12 +201,44 @@
     }
   }
   .about-hero-inner { max-width: 680px; }
+  .about-hero-inner h1 {
+    color: #fff;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 6px 18px rgba(0,0,0,0.75), 0 12px 36px rgba(0,0,0,0.5);
+  }
   .about-hero-inner p {
     color: rgba(255,255,255,0.95);
     font-size: 18px; line-height: 1.7;
-    margin: 0 0 0; max-width: 560px;
+    margin: 0 0 32px; max-width: 560px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 6px 18px rgba(0,0,0,0.75), 0 12px 36px rgba(0,0,0,0.5);
   }
+  .about-btn-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    color: #fff !important;
+    padding: 18px 36px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 17px;
+    min-height: 44px;
+    box-shadow: 0 8px 24px rgba(51,180,74,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .about-btn-hero:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(51,180,74,0.45); }
+
+  .about-hero-contacts { display: flex; gap: 24px; margin-top: 18px; flex-wrap: wrap; }
+  .about-hero-contacts a {
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+    min-height: 44px; padding: 4px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+  }
+  .about-hero-contacts svg { width: 16px; height: 16px; flex-shrink: 0; stroke: #fff; fill: none; stroke-width: 2; }
 
   /* MAIN SECTION */
   .about-section { padding: 56px 6%; position: relative; }
@@ -418,7 +450,19 @@
   <!-- HERO -->
   <section class="about-hero">
     <div class="about-hero-inner">
+      <h1>About South Florida Window Cleaning</h1>
       <p>Family owned and operated. Serving South Florida homes and businesses for nearly two decades.</p>
+      <a class="about-btn-hero" href="/contact/">Get Your Free On-Site Quote</a>
+      <div class="about-hero-contacts">
+        <a href="tel:9549986178">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (954) 998-6178
+        </a>
+        <a href="mailto:info@sflwindows.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+          info@sflwindows.com
+        </a>
+      </div>
     </div>
   </section>
 
@@ -517,7 +561,7 @@
     <div class="about-area-inner">
       <div class="about-area-text">
         <h2>Proudly Serving South Florida</h2>
-        <p>We serve residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties. From the coast to western communities, we cover the full tri-county area.</p>
+        <p>We serve residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties — including Fort Lauderdale, Boca Raton, and West Palm Beach. From the coast to western communities, we cover the full tri-county area.</p>
         <p>Not sure if we service your area? Give us a call — chances are we do.</p>
         <a href="/contact/" class="about-area-btn">Get a Free On-Site Quote</a>
       </div>
