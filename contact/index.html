@@ -12,6 +12,9 @@
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=800,quality=85,format=auto/images/van.png" fetchpriority="high" media="(max-width: 768px)">
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/van.png" fetchpriority="high" media="(min-width: 769px)">
 
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Us | South Florida Window Cleaning | Free On-Site Quotes">
@@ -451,6 +454,9 @@
             <label for="message">Message <span class="required">*</span></label>
             <textarea id="message" name="message" placeholder="Tell us about your property and what you need..." required></textarea>
           </div>
+
+          <!-- Cloudflare Turnstile widget -->
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAD5_t_VGS2-SUw2Z"></div>
 
           <button type="submit" class="sfl-form-submit" id="sfl-submit">Send My Request</button>
         </form>
