@@ -20,19 +20,24 @@
 <meta property="og:description" content="Limpieza de ventanas cerca de Fort Lauderdale. Broward, Palm Beach, Miami-Dade. Limpieza de paneles solares, lavado suave, lavado a presión, limpieza de canaletas.">
 <meta property="og:url" content="https://sflwindowcleaning.com/es/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp">
+<meta property="og:image:alt" content="Limpieza profesional de ventanas en el sur de la Florida">
 <meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_CA">
 <meta property="og:site_name" content="South Florida Window Cleaning">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Limpieza de Ventanas en el Sur de la Florida | Servicios de Limpieza Exterior">
 <meta name="twitter:description" content="Limpieza de ventanas cerca de Fort Lauderdale. Broward, Palm Beach, Miami-Dade. Limpieza de paneles solares, lavado suave, lavado a presión, limpieza de canaletas.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp">
+<meta name="twitter:image:alt" content="Limpieza profesional de ventanas en el sur de la Florida">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
+  "inLanguage": "es",
   "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp",
   "url": "https://sflwindowcleaning.com/es/",
   "telephone": "+19549986178",
@@ -44,9 +49,9 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Condado de Broward" },
-    { "@type": "AdministrativeArea", "name": "Condado de Palm Beach" },
-    { "@type": "AdministrativeArea", "name": "Condado de Miami-Dade" },
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
     { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "openingHoursSpecification": {
@@ -69,6 +74,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": "es",
   "mainEntity": [
     {
       "@type": "Question",
@@ -252,6 +258,38 @@
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
 
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .lang-switch a,
+  .lang-switch .lang-current {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+
+  .lang-switch .lang-current {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    cursor: default;
+  }
+
   .header-burger {
     display: none;
     background: none;
@@ -283,6 +321,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block;
       width: 100%;
@@ -737,6 +777,11 @@
       </a>
       <span class="header-hours">Lun–Vie, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Seleccionar idioma">
+      <a href="/" hreflang="en" lang="en" title="English">EN</a>
+      <span class="lang-current" lang="es" aria-current="true">ES</span>
+      <a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Abrir menú" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -759,7 +804,7 @@
       </button>
     </div>
     <div class="sfl-hero-inner">
-      <h1>Servicios de Limpieza Exterior</h1>
+      <h1>Servicios de Limpieza Exterior en el Sur de la Florida</h1>
       <p>Atendemos a propietarios de casas y negocios en Fort Lauderdale y en todo el condado de Broward, Palm Beach y Miami-Dade — limpieza de ventanas, limpieza de paneles solares, lavado suave, lavado a presión y limpieza de canaletas.</p>
       <a class="sfl-btn-primary" href="/es/contacto/">Programe una Cotización Gratuita en el Sitio</a>
       <div class="sfl-cta-contact-row on-dark">
@@ -1176,18 +1221,16 @@
       if (heroVideo.paused) {
         heroVideo.play();
         pauseBtn.setAttribute('aria-pressed', 'false');
-        pauseBtn.setAttribute('aria-label', 'Pause background video');
+        pauseBtn.setAttribute('aria-label', 'Pausar video de fondo');
         iconPause.style.display = 'block';
         iconPlay.style.display = 'none';
       } else {
         heroVideo.pause();
         pauseBtn.setAttribute('aria-pressed', 'true');
-        pauseBtn.setAttribute('aria-label', 'Play background video');
+        pauseBtn.setAttribute('aria-label', 'Reproducir video de fondo');
         iconPause.style.display = 'none';
         iconPlay.style.display = 'block';
       }
     });
   }
 </script>
-</body>
-</html>
