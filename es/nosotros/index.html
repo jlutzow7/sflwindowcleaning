@@ -20,19 +20,24 @@
 <meta property="og:description" content="Empresa familiar de limpieza exterior, operada por sus propios dueños, que atiende los condados de Broward, Palm Beach y Miami-Dade desde hace casi dos décadas.">
 <meta property="og:url" content="https://sflwindowcleaning.com/es/nosotros/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-hero.jpg">
+<meta property="og:image:alt" content="Equipo de South Florida Window Cleaning trabajando en el sur de la Florida">
 <meta property="og:site_name" content="South Florida Window Cleaning">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_CA">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nosotros | South Florida Window Cleaning">
 <meta name="twitter:description" content="Empresa familiar de limpieza exterior, operada por sus propios dueños, que atiende los condados de Broward, Palm Beach y Miami-Dade desde hace casi dos décadas.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-hero.jpg">
+<meta name="twitter:image:alt" content="Equipo de South Florida Window Cleaning trabajando en el sur de la Florida">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
+  "inLanguage": "es",
   "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-hero.jpg",
   "url": "https://sflwindowcleaning.com/es/nosotros/",
   "telephone": "+19549986178",
@@ -44,9 +49,10 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Condado de Broward" },
-    { "@type": "AdministrativeArea", "name": "Condado de Palm Beach" },
-    { "@type": "AdministrativeArea", "name": "Condado de Miami-Dade" }
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "sameAs": [
     "https://www.facebook.com/sflwindowcleaning",
@@ -115,6 +121,11 @@
   .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+  .lang-switch { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .lang-switch a, .lang-switch .lang-current { font-size: 13px; font-weight: 800; letter-spacing: 0.5px; padding: 0 10px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid transparent; }
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+  .lang-switch .lang-current { color: #fff; background: var(--blue); border-color: var(--blue); cursor: default; }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -137,6 +148,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
       padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
@@ -429,6 +442,11 @@
       </a>
       <span class="header-hours">Lun–Vie, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Seleccionar idioma">
+      <a href="/about-us/" hreflang="en" lang="en" title="English">EN</a>
+      <span class="lang-current" lang="es" aria-current="true">ES</span>
+      <a href="/fr/a-propos/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Abrir menú" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -442,8 +460,8 @@
   <section class="about-hero">
     <div class="about-hero-inner">
       <h1>Sobre South Florida Window Cleaning</h1>
-      <p>Empresa familiar, operada por sus propios dueños. Atendiendo hogares y negocios del sur de Florida en Fort Lauderdale, Davie y el área circundante de los tres condados desde hace casi dos décadas.</p>
-      <a class="about-btn-hero" href="/contact/">Solicite su Cotización Gratuita en el Sitio</a>
+      <p>Empresa familiar, operada por sus propios dueños. Atendiendo hogares y negocios del sur de la Florida en Fort Lauderdale, Davie y el área circundante de los tres condados desde hace casi dos décadas.</p>
+      <a class="about-btn-hero" href="/es/contacto/">Solicite su Cotización Gratuita en el Sitio</a>
       <div class="about-hero-contacts">
         <a href="tel:9549986178">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -466,9 +484,9 @@
         srcset="https://sflwindowcleaning.com/cdn-cgi/image/width=700,quality=85,format=auto/images/about-us-storefront.jpg 700w,
                 https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-storefront.jpg 1200w"
         sizes="(max-width: 900px) 90vw, 600px"
-        alt="Limpieza de vidrieras comerciales en el sur de Florida" width="600" height="338">
+        alt="Limpieza de vidrieras comerciales en el sur de la Florida" width="600" height="338">
 
-      <p>South Florida Window Cleaning ha estado brindando servicios profesionales de limpieza exterior a clientes residenciales y comerciales en los condados de Broward, Palm Beach y Miami-Dade durante casi dos décadas. Lo que comenzó como un compromiso con la calidad del trabajo y un servicio confiable se ha convertido en un nombre de confianza en la limpieza exterior de todo el sur de Florida, incluyendo Fort Lauderdale, Davie y Cooper City.</p>
+      <p>South Florida Window Cleaning ha estado brindando servicios profesionales de limpieza exterior a clientes residenciales y comerciales en los condados de Broward, Palm Beach y Miami-Dade durante casi dos décadas. Lo que comenzó como un compromiso con la calidad del trabajo y un servicio confiable se ha convertido en un nombre de confianza en la limpieza exterior de todo el sur de la Florida, incluyendo Fort Lauderdale, Davie y Cooper City.</p>
 
       <p>Somos una empresa familiar, operada por sus propios dueños. Cuando nos llama, habla con el dueño. Cuando llegamos a su propiedad, el dueño está ahí haciendo el trabajo. Eso significa que usted recibe un nivel de atención personal, responsabilidad y cuidado que las empresas más grandes simplemente no pueden igualar.</p>
 
@@ -548,10 +566,10 @@
   <section class="about-area">
     <div class="about-area-inner">
       <div class="about-area-text">
-        <h2>Con Orgullo Servimos al Sur de Florida</h2>
+        <h2>Con Orgullo Servimos al Sur de la Florida</h2>
         <p>Atendemos a clientes residenciales y comerciales en los condados de Broward, Palm Beach y Miami-Dade, incluyendo Fort Lauderdale, Boca Raton y West Palm Beach. Desde la costa hasta las comunidades del oeste, cubrimos toda el área de los tres condados.</p>
         <p>¿No está seguro si atendemos su área? Llámenos, es muy probable que sí.</p>
-        <a href="/contact/" class="about-area-btn">Obtenga una Cotización Gratuita en el Sitio</a>
+        <a href="/es/contacto/" class="about-area-btn">Obtenga una Cotización Gratuita en el Sitio</a>
       </div>
       <ul class="about-area-list">
         <li>Fort Lauderdale</li>
@@ -578,7 +596,7 @@
     <div class="about-bottom-inner">
       <h2>¿Listo para Trabajar con Nosotros?</h2>
       <p>Contacte a South Florida Window Cleaning hoy mismo para una evaluación gratuita en el sitio. Revisaremos su propiedad, responderemos sus preguntas y le daremos una cotización clara, sin presión, sin sorpresas.</p>
-      <a class="about-bottom-btn" href="/contact/">Programe una Cotización Gratuita en el Sitio</a>
+      <a class="about-bottom-btn" href="/es/contacto/">Programe una Cotización Gratuita en el Sitio</a>
       <div class="about-contacts">
         <a href="tel:+19549986178">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
@@ -634,7 +652,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los derechos reservados.</div>
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los Derechos Reservados.</div>
 </footer>
 <script>
   const burger = document.querySelector('.header-burger');
