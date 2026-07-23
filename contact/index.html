@@ -4,32 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | South Florida Window Cleaning | Free On-Site Quotes</title>
-<meta name="description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties. Call (954) 998-6178 or fill out the form.">
+<meta name="description" content="Request a free on-site quote from South Florida Window Cleaning. Serving Broward, Palm Beach, and Miami-Dade Counties. Call (954) 998-6178 or fill out the form.">
 <link rel="canonical" href="https://sflwindowcleaning.com/contact/">
+<link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/contact/">
+<link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/contacto/">
+<link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/contact/">
+<link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/contact/">
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/cdn-cgi/image/width=64,quality=85,format=auto/images/favicon-red.png">
 
-<!-- Preload hero -->
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=800,quality=85,format=auto/images/van.png" fetchpriority="high" media="(max-width: 768px)">
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/van.png" fetchpriority="high" media="(min-width: 769px)">
 
-<!-- Cloudflare Turnstile -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Us | South Florida Window Cleaning | Free On-Site Quotes">
-<meta property="og:description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties.">
+<meta property="og:description" content="Request a free on-site quote from South Florida Window Cleaning. Serving Broward, Palm Beach, and Miami-Dade Counties.">
 <meta property="og:url" content="https://sflwindowcleaning.com/contact/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/van.png">
 <meta property="og:site_name" content="South Florida Window Cleaning">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta property="og:locale:alternate" content="fr_CA">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Us | South Florida Window Cleaning | Free On-Site Quotes">
-<meta name="twitter:description" content="Request a free on-site estimate from South Florida Window Cleaning. We serve Broward, Palm Beach, and Miami-Dade Counties.">
+<meta name="twitter:description" content="Request a free on-site quote from South Florida Window Cleaning. Serving Broward, Palm Beach, and Miami-Dade Counties.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/van.png">
 
-<!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,7 +50,8 @@
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Broward County" },
     { "@type": "AdministrativeArea", "name": "Palm Beach County" },
-    { "@type": "AdministrativeArea", "name": "Miami-Dade County" }
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "sameAs": [
     "https://www.facebook.com/sflwindowcleaning",
@@ -81,7 +84,6 @@
   a { text-decoration: none; color: inherit; }
   img { max-width: 100%; display: block; }
 
-  /* HEADER */
   .site-header {
     position: sticky; top: 0; z-index: 1000;
     background: #eef4fa;
@@ -118,6 +120,11 @@
   .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+  .lang-switch { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .lang-switch a, .lang-switch .lang-current { font-size: 13px; font-weight: 800; letter-spacing: 0.5px; padding: 0 10px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid transparent; }
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+  .lang-switch .lang-current { color: #fff; background: var(--blue); border-color: var(--blue); cursor: default; }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -140,6 +147,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
       padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
@@ -147,7 +156,6 @@
     }
   }
 
-  /* FOOTER */
   .site-footer { background: #fff; }
   .footer-topbar { background: var(--dark-blue); height: 8px; }
   .footer-main { max-width: 1400px; margin: 0 auto; padding: 32px 4% 0; }
@@ -182,11 +190,9 @@
     .footer-social { justify-content: center; }
   }
 
-  /* PAGE STYLES */
   .contact-page { width: 100%; overflow-x: hidden; }
   .contact-page * { box-sizing: border-box; }
 
-  /* HERO */
   .contact-hero {
     position: relative;
     min-height: 480px;
@@ -218,7 +224,6 @@
     max-width: 560px;
   }
 
-  /* MAIN */
   .contact-main { background: var(--bg); padding: 56px 6%; }
   .contact-inner {
     max-width: 1160px; margin: 0 auto;
@@ -226,7 +231,6 @@
     gap: 60px; align-items: start;
   }
 
-  /* FORM WRAP */
   .contact-form-wrap {
     background: #fff; border-radius: 20px;
     padding: 46px 40px;
@@ -242,7 +246,6 @@
     margin: 0 0 28px; line-height: 1.6;
   }
 
-  /* FORM ELEMENTS */
   .sfl-form { display: flex; flex-direction: column; gap: 18px; }
   .sfl-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .sfl-form-group { display: flex; flex-direction: column; gap: 6px; }
@@ -302,7 +305,6 @@
     font-size: 15px; margin-bottom: 16px;
   }
 
-  /* INFO SIDE */
   .contact-info { display: flex; flex-direction: column; gap: 20px; }
   .contact-info-card {
     background: #fff; border-radius: 16px; padding: 26px 24px;
@@ -324,7 +326,6 @@
   .contact-info-card a:hover { opacity: 0.8; }
   .contact-note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 8px !important; }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .contact-inner { grid-template-columns: 1fr; gap: 36px; }
     .contact-hero { min-height: 300px; padding: 0 6% 40px; }
@@ -369,6 +370,11 @@
       </a>
       <span class="header-hours">Mon–Fri, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Select language">
+      <span class="lang-current" lang="en" aria-current="true">EN</span>
+      <a href="/es/contacto/" hreflang="es" lang="es" title="Español">ES</a>
+      <a href="/fr/contact/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Open menu" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -379,25 +385,22 @@
 <main>
 <div class="contact-page">
 
-  <!-- HERO -->
   <section class="contact-hero">
     <div class="contact-hero-inner">
       <h1>Get Your Free On-Site Quote</h1>
-      <p>We come to you, take a look at your property, and give you a clear no-obligation estimate. No phone quotes — every job is different and deserves a proper look.</p>
+      <p>We come to your property, take a look, and give you a clear quote with no obligation. We don't quote over the phone — every job is different and deserves a proper assessment.</p>
     </div>
   </section>
 
-  <!-- MAIN -->
   <section class="contact-main">
     <div class="contact-inner">
 
-      <!-- FORM -->
       <div class="contact-form-wrap">
-        <h2>Request a Free Estimate</h2>
-        <p>Fill out the form below and we will be in touch to schedule your free on-site visit.</p>
+        <h2>Request a Free Evaluation</h2>
+        <p>Fill out the form below and we'll be in touch to schedule your free on-site visit.</p>
 
         <div class="sfl-form-success" id="sfl-success">
-          <strong>Thank you!</strong> Your message has been received. We will be in touch within one business day to schedule your free on-site estimate.
+          <strong>Thank you!</strong> Your message has been received. We'll be in touch within one business day to schedule your free on-site evaluation.
         </div>
         <div class="sfl-form-error" id="sfl-error">
           Something went wrong. Please try again or call us directly at (954) 998-6178.
@@ -431,8 +434,8 @@
           </div>
 
           <div class="sfl-form-group">
-            <label for="company">Company Name</label>
-            <input type="text" id="company" name="company" placeholder="Company Name (optional)">
+            <label for="company">Business Name</label>
+            <input type="text" id="company" name="company" placeholder="Business Name (optional)">
           </div>
 
           <div class="sfl-form-group">
@@ -445,7 +448,7 @@
               <option value="Pressure Washing">Pressure Washing</option>
               <option value="Gutter Cleaning">Gutter Cleaning</option>
               <option value="Multiple Services">Multiple Services</option>
-              <option value="Not Sure">Not Sure — I Need a Recommendation</option>
+              <option value="Not Sure">Not Sure — Need a Recommendation</option>
             </select>
           </div>
 
@@ -454,14 +457,12 @@
             <textarea id="message" name="message" placeholder="Tell us about your property and what you need..." required></textarea>
           </div>
 
-          <!-- Cloudflare Turnstile widget -->
           <div class="cf-turnstile" data-sitekey="0x4AAAAAAD5_t_VGS2-SUw2Z"></div>
 
           <button type="submit" class="sfl-form-submit" id="sfl-submit">Send My Request</button>
         </form>
       </div>
 
-      <!-- INFO -->
       <div class="contact-info">
         <div class="contact-info-card">
           <h3>Call or Email Us</h3>
@@ -480,13 +481,13 @@
 
         <div class="contact-info-card">
           <h3>Why On-Site Quotes?</h3>
-          <p>Every property is different. The number of windows, the height of the building, the type of surfaces, the accessibility, and the condition of what needs to be cleaned all affect the price.</p>
-          <p>An on-site visit lets us give you an accurate quote — not a guess.</p>
+          <p>Every property is different. The number of windows, building height, surface types, accessibility, and the condition of what needs cleaning all affect pricing.</p>
+          <p>An on-site visit lets us give you an accurate quote, not a guess.</p>
         </div>
 
         <div class="contact-info-card">
           <h3>What to Expect</h3>
-          <p>After you submit the form we will contact you to schedule a convenient time for a free on-site visit. The visit typically takes 15 to 30 minutes. We will walk the property, answer your questions, and provide a clear written estimate before we leave.</p>
+          <p>After submitting the form, we'll reach out to schedule a convenient time for a free on-site visit. The visit usually takes 15-30 minutes. We'll walk the property, answer your questions, and give you a clear, written quote before we leave.</p>
         </div>
       </div>
 
