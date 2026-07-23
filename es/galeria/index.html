@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galería | South Florida Window Cleaning | Broward, Palm Beach y Miami-Dade</title>
-<meta name="description" content="Galería de fotos de trabajos profesionales de limpieza de ventanas, paneles solares, lavado suave, lavado a presión y limpieza de canaletas en todo el sur de Florida.">
+<meta name="description" content="Galería de fotos de trabajos profesionales de limpieza de ventanas, paneles solares, lavado suave, lavado a presión y limpieza de canaletas en todo el sur de la Florida.">
 <link rel="canonical" href="https://sflwindowcleaning.com/es/galeria/">
 <link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gallery/">
 <link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/galeria/">
@@ -20,19 +20,24 @@
 <meta property="og:description" content="Galería de fotos de trabajos profesionales de limpieza exterior en los condados de Broward, Palm Beach y Miami-Dade.">
 <meta property="og:url" content="https://sflwindowcleaning.com/es/galeria/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/const-house.jpg">
+<meta property="og:image:alt" content="Trabajo de limpieza exterior profesional en el sur de la Florida">
 <meta property="og:site_name" content="South Florida Window Cleaning">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_CA">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Galería | South Florida Window Cleaning">
 <meta name="twitter:description" content="Galería de fotos de trabajos profesionales de limpieza exterior en los condados de Broward, Palm Beach y Miami-Dade.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/const-house.jpg">
+<meta name="twitter:image:alt" content="Trabajo de limpieza exterior profesional en el sur de la Florida">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
+  "inLanguage": "es",
   "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/const-house.jpg",
   "url": "https://sflwindowcleaning.com/es/galeria/",
   "telephone": "+19549986178",
@@ -44,9 +49,10 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Condado de Broward" },
-    { "@type": "AdministrativeArea", "name": "Condado de Palm Beach" },
-    { "@type": "AdministrativeArea", "name": "Condado de Miami-Dade" }
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "sameAs": [
     "https://www.facebook.com/sflwindowcleaning",
@@ -115,6 +121,11 @@
   .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+  .lang-switch { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .lang-switch a, .lang-switch .lang-current { font-size: 13px; font-weight: 800; letter-spacing: 0.5px; padding: 0 10px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid transparent; }
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+  .lang-switch .lang-current { color: #fff; background: var(--blue); border-color: var(--blue); cursor: default; }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -137,6 +148,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
       padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
@@ -322,8 +335,8 @@
         </div>
       </div>
       <a href="/es/galeria/" class="active">Galería</a>
-      <a href="/contact/">Contacto</a>
-      <a href="/about-us/">Nosotros</a>
+      <a href="/es/contacto/">Contacto</a>
+      <a href="/es/nosotros/">Nosotros</a>
     </nav>
     <div class="header-right">
       <a href="tel:9549986178" class="header-phone">
@@ -332,6 +345,11 @@
       </a>
       <span class="header-hours">Lun–Vie, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Seleccionar idioma">
+      <a href="/gallery/" hreflang="en" lang="en" title="English">EN</a>
+      <span class="lang-current" lang="es" aria-current="true">ES</span>
+      <a href="/fr/galerie/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Abrir menú" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -345,7 +363,7 @@
   <section class="gallery-hero">
     <div class="gallery-hero-inner">
       <h1>Nuestro Trabajo</h1>
-      <p>Resultados reales de trabajos reales en todo el sur de Florida. Nuestra galería completa de fotos estará disponible pronto.</p>
+      <p>Resultados reales de trabajos reales en todo el sur de la Florida. Nuestra galería completa de fotos estará disponible pronto.</p>
     </div>
   </section>
 
@@ -398,7 +416,7 @@
         </div>
       </div>
 
-      <a class="gallery-cta-btn" href="/contact/">
+      <a class="gallery-cta-btn" href="/es/contacto/">
         Obtenga una Cotización Gratuita en el Sitio
         <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
@@ -421,8 +439,8 @@
   <a href="/es/lavado-a-presion/">Lavado a Presión</a>
   <a href="/es/limpieza-de-canaletas/">Limpieza de Canaletas</a>
   <a href="/es/galeria/">Galería</a>
-  <a href="/contact/">Contacto</a>
-  <a href="/about-us/">Nosotros</a>
+  <a href="/es/contacto/">Contacto</a>
+  <a href="/es/nosotros/">Nosotros</a>
 </nav>
       <div class="footer-center">
         <a href="/es/" class="footer-logo"><img src="https://sflwindowcleaning.com/cdn-cgi/image/width=420,quality=85,format=auto/images/south-florida-window-cleaning.png" alt="South Florida Window Cleaning" width="400"></a>
@@ -448,7 +466,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los derechos reservados.</div>
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los Derechos Reservados.</div>
 </footer>
 <script>
   const burger = document.querySelector('.header-burger');
