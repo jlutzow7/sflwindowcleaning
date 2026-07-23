@@ -22,19 +22,24 @@
 <meta property="og:description" content="Solicite una evaluación gratuita en el sitio de South Florida Window Cleaning. Atendemos los condados de Broward, Palm Beach y Miami-Dade.">
 <meta property="og:url" content="https://sflwindowcleaning.com/es/contacto/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/van.png">
+<meta property="og:image:alt" content="Camioneta de South Florida Window Cleaning">
 <meta property="og:site_name" content="South Florida Window Cleaning">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_CA">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contáctenos | South Florida Window Cleaning | Cotizaciones Gratuitas en el Sitio">
 <meta name="twitter:description" content="Solicite una evaluación gratuita en el sitio de South Florida Window Cleaning. Atendemos los condados de Broward, Palm Beach y Miami-Dade.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/van.png">
+<meta name="twitter:image:alt" content="Camioneta de South Florida Window Cleaning">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "South Florida Window Cleaning",
+  "inLanguage": "es",
   "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/van.png",
   "url": "https://sflwindowcleaning.com/es/contacto/",
   "telephone": "+19549986178",
@@ -46,9 +51,10 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Condado de Broward" },
-    { "@type": "AdministrativeArea", "name": "Condado de Palm Beach" },
-    { "@type": "AdministrativeArea", "name": "Condado de Miami-Dade" }
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "sameAs": [
     "https://www.facebook.com/sflwindowcleaning",
@@ -117,6 +123,11 @@
   .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+  .lang-switch { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .lang-switch a, .lang-switch .lang-current { font-size: 13px; font-weight: 800; letter-spacing: 0.5px; padding: 0 10px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid transparent; }
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+  .lang-switch .lang-current { color: #fff; background: var(--blue); border-color: var(--blue); cursor: default; }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -139,6 +150,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
       padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
@@ -351,7 +364,7 @@
       </div>
       <a href="/es/galeria/">Galería</a>
       <a href="/es/contacto/" class="active">Contacto</a>
-      <a href="/about-us/">Nosotros</a>
+      <a href="/es/nosotros/">Nosotros</a>
     </nav>
     <div class="header-right">
       <a href="tel:9549986178" class="header-phone">
@@ -360,6 +373,11 @@
       </a>
       <span class="header-hours">Lun–Vie, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Seleccionar idioma">
+      <a href="/contact/" hreflang="en" lang="en" title="English">EN</a>
+      <span class="lang-current" lang="es" aria-current="true">ES</span>
+      <a href="/fr/contact/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Abrir menú" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -495,7 +513,7 @@
   <a href="/es/limpieza-de-canaletas/">Limpieza de Canaletas</a>
   <a href="/es/galeria/">Galería</a>
   <a href="/es/contacto/">Contacto</a>
-  <a href="/about-us/">Nosotros</a>
+  <a href="/es/nosotros/">Nosotros</a>
 </nav>
       <div class="footer-center">
         <a href="/es/" class="footer-logo"><img src="https://sflwindowcleaning.com/cdn-cgi/image/width=420,quality=85,format=auto/images/south-florida-window-cleaning.png" alt="South Florida Window Cleaning" width="400"></a>
@@ -521,7 +539,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los derechos reservados.</div>
+  <div class="footer-copyright">© 2026 South Florida Window Cleaning. Todos los Derechos Reservados.</div>
 </footer>
 
 <script>
