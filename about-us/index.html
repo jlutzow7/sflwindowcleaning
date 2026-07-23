@@ -3,30 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | South Florida Window Cleaning | Broward, Palm Beach & Miami-Dade</title>
-<meta name="description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades. Professional window cleaning, solar panels, soft washing, pressure washing, and gutter cleaning.">
+<title>About Us | South Florida Window Cleaning | Broward, Palm Beach &amp; Miami-Dade</title>
+<meta name="description" content="Family-owned exterior cleaning company, owner-operated, serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades. Professional window cleaning, solar panel cleaning, soft washing, pressure washing, and gutter cleaning.">
 <link rel="canonical" href="https://sflwindowcleaning.com/about-us/">
+<link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/about-us/">
+<link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/nosotros/">
+<link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/a-propos/">
+<link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/about-us/">
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/cdn-cgi/image/width=64,quality=85,format=auto/images/favicon-red.png">
 
-<!-- Preload hero -->
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=800,quality=85,format=auto/images/about-us-hero.jpg" fetchpriority="high" media="(max-width: 768px)">
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/about-us-hero.jpg" fetchpriority="high" media="(min-width: 769px)">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Us | South Florida Window Cleaning">
-<meta property="og:description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
+<meta property="og:description" content="Family-owned exterior cleaning company, owner-operated, serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
 <meta property="og:url" content="https://sflwindowcleaning.com/about-us/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-hero.jpg">
 <meta property="og:site_name" content="South Florida Window Cleaning">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta property="og:locale:alternate" content="fr_CA">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Us | South Florida Window Cleaning">
-<meta name="twitter:description" content="Family owned and owner-operated exterior cleaning company serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
+<meta name="twitter:description" content="Family-owned exterior cleaning company, owner-operated, serving Broward, Palm Beach, and Miami-Dade Counties for nearly two decades.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-hero.jpg">
 
-<!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +48,8 @@
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Broward County" },
     { "@type": "AdministrativeArea", "name": "Palm Beach County" },
-    { "@type": "AdministrativeArea", "name": "Miami-Dade County" }
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+    { "@type": "City", "name": "Fort Lauderdale" }
   ],
   "sameAs": [
     "https://www.facebook.com/sflwindowcleaning",
@@ -78,7 +82,6 @@
   a { text-decoration: none; color: inherit; }
   img { max-width: 100%; display: block; }
 
-  /* HEADER */
   .site-header {
     position: sticky; top: 0; z-index: 1000;
     background: #eef4fa;
@@ -115,6 +118,11 @@
   .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; color: var(--blue); padding: 8px 0; min-height: 44px; }
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+  .lang-switch { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+  .lang-switch a, .lang-switch .lang-current { font-size: 13px; font-weight: 800; letter-spacing: 0.5px; padding: 0 10px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid transparent; }
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+  .lang-switch .lang-current { color: #fff; background: var(--blue); border-color: var(--blue); cursor: default; }
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -137,6 +145,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block; width: 100%; text-align: center;
       padding: 10px 0; border-top: 1px solid rgba(11,27,51,0.08);
@@ -144,7 +154,6 @@
     }
   }
 
-  /* FOOTER */
   .site-footer { background: #fff; }
   .footer-topbar { background: var(--dark-blue); height: 8px; }
   .footer-main { max-width: 1400px; margin: 0 auto; padding: 32px 4% 0; }
@@ -179,11 +188,9 @@
     .footer-social { justify-content: center; }
   }
 
-  /* PAGE STYLES */
   .about-page { width: 100%; overflow-x: hidden; }
   .about-page * { box-sizing: border-box; }
 
-  /* HERO */
   .about-hero {
     position: relative;
     min-height: 600px;
@@ -240,7 +247,6 @@
   }
   .about-hero-contacts svg { width: 16px; height: 16px; flex-shrink: 0; stroke: #fff; fill: none; stroke-width: 2; }
 
-  /* MAIN SECTION */
   .about-section { padding: 56px 6%; position: relative; }
   .about-light { background: #fff; }
   .about-tint { background: var(--bg); }
@@ -283,7 +289,6 @@
 
   .about-clearfix::after { content: ""; display: table; clear: both; }
 
-  /* VALUES GRID */
   .about-values { padding: 56px 6%; background: var(--bg); position: relative; }
   .about-values::before {
     content: ""; position: absolute;
@@ -313,7 +318,6 @@
   .about-value-card h3 { font-size: 17px; font-weight: 900; color: var(--dark-blue); margin: 0 0 10px; }
   .about-value-card p { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0; }
 
-  /* SERVICE AREA */
   .about-area {
     background: var(--dark-blue);
     padding: 56px 6%;
@@ -361,7 +365,6 @@
     border-radius: 50%; background: var(--green); flex-shrink: 0;
   }
 
-  /* BOTTOM CTA */
   .about-bottom-cta {
     background: linear-gradient(135deg, #0b1b33 0%, #0e2744 50%, #0b1b33 100%);
     padding: 80px 6%; text-align: center; position: relative; overflow: hidden;
@@ -390,7 +393,6 @@
   .about-contacts a:hover { color: var(--green); }
   .about-contacts svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .about-photo-right { float: none; width: 100%; margin: 0 0 24px 0; }
     .about-values-grid { grid-template-columns: 1fr 1fr; }
@@ -437,6 +439,11 @@
       </a>
       <span class="header-hours">Mon–Fri, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Select language">
+      <span class="lang-current" lang="en" aria-current="true">EN</span>
+      <a href="/es/nosotros/" hreflang="es" lang="es" title="Español">ES</a>
+      <a href="/fr/a-propos/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Open menu" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -447,11 +454,10 @@
 <main>
 <div class="about-page">
 
-  <!-- HERO -->
   <section class="about-hero">
     <div class="about-hero-inner">
       <h1>About South Florida Window Cleaning</h1>
-      <p>Family owned and operated. Serving South Florida homes and businesses throughout Fort Lauderdale, Davie, and the surrounding tri-county area for nearly two decades.</p>
+      <p>Family-owned, owner-operated. Serving South Florida homes and businesses in Fort Lauderdale, Davie, and the surrounding tri-county area for nearly two decades.</p>
       <a class="about-btn-hero" href="/contact/">Get Your Free On-Site Quote</a>
       <div class="about-hero-contacts">
         <a href="tel:9549986178">
@@ -466,7 +472,6 @@
     </div>
   </section>
 
-  <!-- MAIN -->
   <section class="about-section about-light">
     <div class="about-inner about-clearfix">
       <div class="about-eyebrow"><span></span>About Us</div>
@@ -476,29 +481,28 @@
         srcset="https://sflwindowcleaning.com/cdn-cgi/image/width=700,quality=85,format=auto/images/about-us-storefront.jpg 700w,
                 https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/about-us-storefront.jpg 1200w"
         sizes="(max-width: 900px) 90vw, 600px"
-        alt="Commercial glass storefront cleaning South Florida" width="600" height="338">
+        alt="Commercial storefront window cleaning South Florida" width="600" height="338">
 
       <p>South Florida Window Cleaning has been providing professional exterior cleaning services to residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties for nearly two decades. What started as a commitment to quality workmanship and dependable service has grown into a trusted name in exterior cleaning across South Florida, including Fort Lauderdale, Davie, and Cooper City.</p>
 
-      <p>We are a family owned and owner-operated business. When you call us, you talk to the owner. When we show up at your property, the owner is there doing the work. That means you get a level of personal attention, accountability, and care that larger companies simply cannot match.</p>
+      <p>We are a family-owned, owner-operated business. When you call, you're talking to the owner. When we show up at your property, the owner is there doing the work. That means you get a level of personal attention, accountability, and care that larger companies simply can't match.</p>
 
-      <p>Every property we service gets our full attention — whether it is a single-family home, a luxury estate, a storefront, or a large commercial building. Our goal on every job is the same: do the work right, leave the property better than we found it, and earn the kind of trust that keeps customers coming back and referring us to their neighbors, friends, and colleagues.</p>
+      <p>Every property we service gets our full attention, whether it's a single-family home, an estate property, a commercial storefront, or a large commercial building. Our goal on every job is the same: do the work right, leave the property better than we found it, and earn the kind of trust that keeps customers coming back and referring us to their neighbors, friends, and colleagues.</p>
 
       <h3>Owner-Operated. Personally Accountable.</h3>
-      <p>Being owner-operated means something specific to us. It means we do not send out crews where the quality varies from visit to visit. It means when you have a question or a concern, you reach the person who actually did the work. It means we stand behind every job we do — because our name and our reputation are on the line every single time.</p>
+      <p>Being owner-operated means something specific to us. It means we don't send crews whose quality varies from visit to visit. It means when you have a question or a concern, you're reaching the person who actually did the work. It means we stand behind every job we do, because our name and our reputation are on the line every time.</p>
 
       <div class="about-callout">
-        <strong>No long-term contracts.</strong> We earn your business on every visit. If you are not satisfied with the results, we make it right — no questions asked.
+        <strong>No long-term contracts.</strong> We earn your trust on every visit. If you're not satisfied with the results, we make it right, no questions asked.
       </div>
 
       <h3>Professional Equipment. Safe Methods.</h3>
-      <p>We invest in professional-grade equipment and stay current with the best methods in the industry. Our pure water cleaning system delivers streak-free, residue-free results on windows and solar panels. Our soft washing equipment uses environmentally safe, biodegradable solutions that clean exterior surfaces thoroughly without damaging paint, stucco, or landscaping. Our pressure washing equipment is calibrated for each surface type to deliver an effective clean without causing damage.</p>
+      <p>We invest in professional-grade equipment and stay current with the best methods in the industry. Our pure water cleaning system delivers spot-free, residue-free results on windows and solar panels. Our soft washing equipment uses biodegradable, environmentally-safe solutions that clean exterior surfaces thoroughly without damaging paint, stucco, or landscaping. Our pressure washing equipment is calibrated for each surface type, delivering effective cleaning without causing damage.</p>
 
-      <p>We take the time to assess each property before we begin and use the right method for each surface. That attention to detail is what separates a professional result from an average one.</p>
+      <p>We take the time to assess each property before we start and use the right method for each surface. That attention to detail is what separates a professional result from an average one.</p>
     </div>
   </section>
 
-  <!-- VALUES -->
   <section class="about-values">
     <div class="about-values-inner">
       <h2>What We Stand For</h2>
@@ -509,7 +513,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
           </div>
           <h3>Quality Workmanship</h3>
-          <p>We do not cut corners. Every job gets our full attention and effort — the same standard whether it is a small residential visit or a large commercial property.</p>
+          <p>We don't cut corners. Every job gets our full attention and effort, with the same standard whether it's a small residential visit or a large commercial property.</p>
         </div>
 
         <div class="about-value-card">
@@ -517,7 +521,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           </div>
           <h3>Punctual &amp; Reliable</h3>
-          <p>We show up when we say we will. We do what we say we are going to do. Dependability is not a bonus — it is the baseline.</p>
+          <p>We show up when we say we will. We do what we say we're going to do. Reliability isn't an add-on, it's the foundation.</p>
         </div>
 
         <div class="about-value-card">
@@ -525,7 +529,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <h3>Personal Service</h3>
-          <p>As an owner-operated business, every customer gets direct access to the person doing the work. No middlemen, no call centers, no runaround.</p>
+          <p>As an owner-operated business, every customer has direct access to the person doing the work. No middlemen, no call centers, no runaround.</p>
         </div>
 
         <div class="about-value-card">
@@ -540,8 +544,8 @@
           <div class="about-value-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line></svg>
           </div>
-          <h3>Streak-Free Results</h3>
-          <p>Our pure water cleaning system guarantees a flawless, spot-free finish on every window and solar panel we clean. Zero streaks — every time.</p>
+          <h3>Spot-Free Results</h3>
+          <p>Our pure water cleaning system guarantees a flawless, spot-free finish on every window and solar panel we clean. Zero streaks, always.</p>
         </div>
 
         <div class="about-value-card">
@@ -549,20 +553,19 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
           <h3>Satisfaction Guaranteed</h3>
-          <p>We stand behind every job. If you are not happy with the results, we come back and make it right — no questions asked.</p>
+          <p>We stand behind every job we do. If you're not satisfied with the results, we'll come back and make it right, no questions asked.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SERVICE AREA -->
   <section class="about-area">
     <div class="about-area-inner">
       <div class="about-area-text">
         <h2>Proudly Serving South Florida</h2>
-        <p>We serve residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties — including Fort Lauderdale, Boca Raton, and West Palm Beach. From the coast to western communities, we cover the full tri-county area.</p>
-        <p>Not sure if we service your area? Give us a call — chances are we do.</p>
+        <p>We serve residential and commercial customers throughout Broward, Palm Beach, and Miami-Dade Counties, including Fort Lauderdale, Boca Raton, and West Palm Beach. From the coast to the western communities, we cover the entire tri-county area.</p>
+        <p>Not sure if we service your area? Give us a call, chances are we do.</p>
         <a href="/contact/" class="about-area-btn">Get a Free On-Site Quote</a>
       </div>
       <ul class="about-area-list">
@@ -586,11 +589,10 @@
     </div>
   </section>
 
-  <!-- BOTTOM CTA -->
   <section class="about-bottom-cta">
     <div class="about-bottom-inner">
       <h2>Ready to Work With Us?</h2>
-      <p>Contact South Florida Window Cleaning today for a free on-site estimate. We will take a look at your property, answer your questions, and give you a clear quote — no pressure, no surprises.</p>
+      <p>Contact South Florida Window Cleaning today for a free on-site evaluation. We'll walk your property, answer your questions, and give you a clear quote — no pressure, no surprises.</p>
       <a class="about-bottom-btn" href="/contact/">Schedule a Free On-Site Quote</a>
       <div class="about-contacts">
         <a href="tel:+19549986178">
