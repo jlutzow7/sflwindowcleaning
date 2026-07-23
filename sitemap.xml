@@ -1,48 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://sflwindowcleaning.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/windows/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/windows/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/ventanas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-vitres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/windows/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/solar-panels/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/solar-panels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/paneles-solares/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/panneaux-solaires/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/solar-panels/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/soft-washing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/soft-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-suave/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-doux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/soft-washing/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/pressure-washing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/pressure-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-a-presion/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-a-pression/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/pressure-washing/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/gutter-cleaning/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/limpieza-de-canaletas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-gouttieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/gallery/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gallery/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/contact/"/>
   </url>
+
   <url>
     <loc>https://sflwindowcleaning.com/about-us/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/about-us/"/>
   </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/ventanas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/windows/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/ventanas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-vitres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/windows/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/paneles-solares/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/solar-panels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/paneles-solares/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/panneaux-solaires/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/solar-panels/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/lavado-suave/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/soft-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-suave/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-doux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/soft-washing/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/lavado-a-presion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/pressure-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-a-presion/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-a-pression/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/pressure-washing/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/limpieza-de-canaletas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/limpieza-de-canaletas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-gouttieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/galeria/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gallery/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/contacto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/contact/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/es/nosotros/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/about-us/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/nettoyage-de-vitres/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/windows/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/ventanas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-vitres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/windows/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/panneaux-solaires/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/solar-panels/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/paneles-solares/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/panneaux-solaires/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/solar-panels/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/lavage-doux/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/soft-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-suave/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-doux/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/soft-washing/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/lavage-a-pression/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/pressure-washing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/lavado-a-presion/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/lavage-a-pression/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/pressure-washing/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/nettoyage-de-gouttieres/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/limpieza-de-canaletas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-gouttieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gutter-cleaning/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/galerie/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/galeria/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/gallery/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/contact/"/>
+  </url>
+
+  <url>
+    <loc>https://sflwindowcleaning.com/fr/a-propos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/about-us/"/>
+  </url>
+
 </urlset>
