@@ -6,6 +6,10 @@
 <title>South Florida Window Cleaning | Exterior Cleaning Services</title>
 <meta name="description" content="Window cleaning services near Fort Lauderdale. Broward, Palm Beach, Miami-Dade. Solar panel cleaning, soft washing, pressure washing, gutter cleaning.">
 <link rel="canonical" href="https://sflwindowcleaning.com/">
+<link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/">
+<link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/">
+<link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/">
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/cdn-cgi/image/width=64,quality=85,format=auto/images/favicon-red.png">
 
 <link rel="preload" as="image" href="https://sflwindowcleaning.com/cdn-cgi/image/width=800,quality=85,format=auto/images/hero-poster.webp" fetchpriority="high" media="(max-width: 768px)">
@@ -16,6 +20,9 @@
 <meta property="og:description" content="Window cleaning services near Fort Lauderdale. Broward, Palm Beach, Miami-Dade. Solar panel cleaning, soft washing, pressure washing, gutter cleaning.">
 <meta property="og:url" content="https://sflwindowcleaning.com/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/hero-poster.webp">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta property="og:locale:alternate" content="fr_CA">
 <meta property="og:site_name" content="South Florida Window Cleaning">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -247,6 +254,38 @@
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
 
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .lang-switch a,
+  .lang-switch .lang-current {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+
+  .lang-switch .lang-current {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    cursor: default;
+  }
+
   .header-burger {
     display: none;
     background: none;
@@ -278,6 +317,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block;
       width: 100%;
@@ -732,6 +773,11 @@
       </a>
       <span class="header-hours">Mon–Fri, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Select language">
+      <span class="lang-current" lang="en" aria-current="true">EN</span>
+      <a href="/es/" hreflang="es" lang="es" title="Español">ES</a>
+      <a href="/fr/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Open menu" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
