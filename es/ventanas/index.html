@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://sflwindowcleaning.com/es/ventanas/">
 <link rel="alternate" hreflang="en" href="https://sflwindowcleaning.com/windows/">
 <link rel="alternate" hreflang="es" href="https://sflwindowcleaning.com/es/ventanas/">
-<link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/fenetres/">
+<link rel="alternate" hreflang="fr" href="https://sflwindowcleaning.com/fr/nettoyage-de-vitres/">
 <link rel="alternate" hreflang="x-default" href="https://sflwindowcleaning.com/windows/">
 <link rel="icon" type="image/png" href="https://sflwindowcleaning.com/cdn-cgi/image/width=64,quality=85,format=auto/images/favicon-red.png">
 
@@ -22,7 +22,10 @@
 <meta property="og:description" content="Limpieza de ventanas sin rayas cerca de usted con nuestro sistema de agua pura. Atendemos Fort Lauderdale, Broward, Palm Beach y Miami-Dade.">
 <meta property="og:url" content="https://sflwindowcleaning.com/es/ventanas/">
 <meta property="og:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/interior-window-cleaning-fort-lauderdale.jpg">
+<meta property="og:image:alt" content="Limpieza de ventanas interior en una casa de Fort Lauderdale">
 <meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_CA">
 <meta property="og:site_name" content="South Florida Window Cleaning">
 
 <!-- Twitter Card -->
@@ -30,6 +33,7 @@
 <meta name="twitter:title" content="Limpieza de Ventanas Cerca de Mí | Fort Lauderdale, Sur de la Florida">
 <meta name="twitter:description" content="Limpieza de ventanas sin rayas cerca de usted con nuestro sistema de agua pura. Atendemos Fort Lauderdale, Broward, Palm Beach y Miami-Dade.">
 <meta name="twitter:image" content="https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/interior-window-cleaning-fort-lauderdale.jpg">
+<meta name="twitter:image:alt" content="Limpieza de ventanas interior en una casa de Fort Lauderdale">
 
 <!-- Service Schema -->
 <script type="application/ld+json">
@@ -38,6 +42,7 @@
   "@type": "Service",
   "serviceType": "Limpieza de Ventanas",
   "name": "Servicios de Limpieza de Ventanas en el Sur de la Florida",
+  "inLanguage": "es",
   "url": "https://sflwindowcleaning.com/es/ventanas/",
   "image": "https://sflwindowcleaning.com/cdn-cgi/image/width=1200,quality=85,format=auto/images/interior-window-cleaning-fort-lauderdale.jpg",
   "provider": {
@@ -60,9 +65,9 @@
     ]
   },
   "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Condado de Broward" },
-    { "@type": "AdministrativeArea", "name": "Condado de Palm Beach" },
-    { "@type": "AdministrativeArea", "name": "Condado de Miami-Dade" },
+    { "@type": "AdministrativeArea", "name": "Broward County" },
+    { "@type": "AdministrativeArea", "name": "Palm Beach County" },
+    { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
     { "@type": "City", "name": "Fort Lauderdale" }
   ]
 }
@@ -73,6 +78,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": "es",
   "mainEntity": [
     {
       "@type": "Question",
@@ -247,6 +253,39 @@
 
   .header-phone svg { width: 18px; height: 18px; fill: var(--blue); }
   .header-hours { font-size: 12px; color: var(--muted); }
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .lang-switch a,
+  .lang-switch .lang-current {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+  }
+
+  .lang-switch a { color: var(--blue); }
+  .lang-switch a:hover { background: #fff; border-color: rgba(11,27,51,0.15); }
+
+  .lang-switch .lang-current {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    cursor: default;
+  }
+
   .header-burger { display: none; background: none; border: none; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
   .header-nav.mobile-open {
@@ -269,6 +308,8 @@
     .header-inner { flex-wrap: wrap; }
     .header-nav, .header-right { display: none; }
     .header-burger { display: flex; }
+    .lang-switch { margin-left: auto; }
+    .lang-switch a, .lang-switch .lang-current { padding: 0 8px; min-width: 40px; }
     .header-phone-mobile {
       display: block;
       width: 100%;
@@ -689,6 +730,11 @@
       </a>
       <span class="header-hours">Lun–Vie, 8am–6pm</span>
     </div>
+    <nav class="lang-switch" aria-label="Seleccionar idioma">
+      <a href="/windows/" hreflang="en" lang="en" title="English">EN</a>
+      <span class="lang-current" lang="es" aria-current="true">ES</span>
+      <a href="/fr/nettoyage-de-vitres/" hreflang="fr" lang="fr" title="Français">FR</a>
+    </nav>
     <button class="header-burger" aria-label="Abrir menú" aria-expanded="false">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b1b33" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
@@ -962,13 +1008,13 @@
       if (pureWaterVideo.paused) {
         pureWaterVideo.play();
         pureWaterPauseBtn.setAttribute('aria-pressed', 'false');
-        pureWaterPauseBtn.setAttribute('aria-label', 'Pause video');
+        pureWaterPauseBtn.setAttribute('aria-label', 'Pausar video');
         iconPause.style.display = 'block';
         iconPlay.style.display = 'none';
       } else {
         pureWaterVideo.pause();
         pureWaterPauseBtn.setAttribute('aria-pressed', 'true');
-        pureWaterPauseBtn.setAttribute('aria-label', 'Play video');
+        pureWaterPauseBtn.setAttribute('aria-label', 'Reproducir video');
         iconPause.style.display = 'none';
         iconPlay.style.display = 'block';
       }
