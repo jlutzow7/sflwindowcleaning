@@ -452,13 +452,29 @@
     z-index: 0;
   }
 
-  .sfl-hero-video {
+  .sfl-hero-poster {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    background-color: #a0c4d8;
+    z-index: 0;
   }
+
+  .sfl-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .sfl-hero-video.is-playing { opacity: 1; }
 
   .sfl-hero-pause {
     position: absolute;
@@ -794,10 +810,11 @@
 
   <section class="sfl-hero" aria-label="Section principale">
     <div class="sfl-hero-media">
-      <script>
-  document.write('<video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/' + (window.innerWidth <= 768 ? 'width=800' : 'width=1920') + ',quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video>');
-</script>
-<noscript><video id="heroVideo" class="sfl-hero-video" poster="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" muted loop playsinline preload="none" aria-hidden="true"></video></noscript>
+      <picture>
+        <source media="(max-width: 768px)" srcset="https://sflwindowcleaning.com/cdn-cgi/image/width=800,quality=85,format=auto/images/hero-poster.webp">
+        <img class="sfl-hero-poster" src="https://sflwindowcleaning.com/cdn-cgi/image/width=1920,quality=85,format=auto/images/hero-poster.webp" alt="Nettoyage professionnel de vitres dans le sud de la Floride" fetchpriority="high" decoding="async" width="1920" height="1080">
+      </picture>
+      <video id="heroVideo" class="sfl-hero-video" muted loop playsinline preload="none" aria-hidden="true"></video>
       <button id="heroPauseBtn" class="sfl-hero-pause" type="button" aria-label="Mettre la vidéo de fond en pause" aria-pressed="false">
         <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
         <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
@@ -1198,18 +1215,21 @@
   });
 
   window.addEventListener('load', function() {
-    const heroVideo = document.getElementById('heroVideo');
-    if (!heroVideo) return;
+    const video = document.getElementById('heroVideo');
+    if (!video) return;
+    video.addEventListener('playing', function() {
+      video.classList.add('is-playing');
+    });
     const webmSource = document.createElement('source');
     webmSource.src = 'https://sflwindowcleaning.com/images/hero-window-cleaning-12s.webm';
     webmSource.type = 'video/webm';
     const mp4Source = document.createElement('source');
     mp4Source.src = 'https://sflwindowcleaning.com/images/hero-window-cleaning-12s.mp4';
     mp4Source.type = 'video/mp4';
-    heroVideo.appendChild(webmSource);
-    heroVideo.appendChild(mp4Source);
-    heroVideo.load();
-    heroVideo.play().catch(function() {});
+    video.appendChild(webmSource);
+    video.appendChild(mp4Source);
+    video.load();
+    video.play().catch(function() {});
   });
 
   const pauseBtn = document.getElementById('heroPauseBtn');
